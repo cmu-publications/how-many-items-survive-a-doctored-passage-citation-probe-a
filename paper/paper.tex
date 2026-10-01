@@ -1,0 +1,213 @@
+\documentclass[11pt]{article}
+\usepackage[review]{acl}
+\usepackage{times}
+\usepackage{latexsym}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{microtype}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{amsmath}
+
+\title{Feasibility Limits of Matched-Foil Controls for Doctored-Passage Citation Probes}
+
+\author{Mohamed Farag \\
+  Carnegie Mellon University, Information Networking Institute, AGAI}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Doctored-passage probes plant a span of a reader's own answer into a retrieved passage and count how often the citation follows it. A matched foil, a span of similar length and fluency that is not the answer, would separate a citation that follows the answer's words from one that follows any plausible insertion. This feasibility study asks whether a probe with such a foil can be run on ASQA at the scale its contrast needs. Under the reader, prompt and eligibility rules we implemented, it could not. We scanned every item of two disjoint pools with Qwen2.5-3B-Instruct reading five GTR passages zero-shot, applied the probe's ordered eligibility filters, and recorded every exclusion. On a 404-item reserved pool, run over three reserved seeds, the probe admitted the same 2 items on every seed, a yield of 0.50\% (Wilson 95\% interval 0.14\% to 1.79\%), against a design target of 50 items per seed. The development pool of 544 items admitted 4, so 6 of the 948 questions in the two pools were usable. The rule that takes the first answer sentence containing a gold alias as the self span, and requires it to be cited, removed 77\% to 81\% of parsed answers. Of the items that reached it, 93\% to 99\% fell to a composite filter that joins the topical-foil match to a duplicate check, and the records cannot tell its two parts apart. The yield analysis and its bounds were written only after both runs were over, which makes every result here exploratory. At the reserved-pool yield, 150 admitted items would take about 30,300 questions, while ASQA's evaluation split has 948. Every reserved-pool seed failed the positive-control validity check, so the per-arm migration counts are reported as diagnostics only, with no directional claim.
+\end{abstract}
+
+\section{Introduction}\label{introduction}
+
+Readers usually take a citation in a retrieval-augmented answer \citep{lewis2020retrieval} to point at the passage the answer came from. Counterfactual probes put that reading to the test, editing the context and checking whether the citation moves with the edit. In the doctored-passage probe of \citet{wallat2025correctness}, a short span of the model's own answer goes into a passage, and the probe counts how often the regenerated answer then cites it. \citet{khan2026attributable} added a no-planting control and raised two more questions. Because their span always sits at the end of the passage, position is folded into the rate. A model that cites a passage once it holds the answer's words may also just be obeying an instruction to answer from the passages, and a no-planting control cannot tell that apart from post-hoc attribution.
+
+A matched foil addresses the second question directly. If a span that is not the answer, planted at the same place, moves the citation as often as the answer's own span does, the probe measures sensitivity to insertion. A foil only works if it can be built, though. Every control adds an eligibility condition, and a probe whose conditions depend on how the reader phrases its answer can lose most of its pool before the first contrast is computed. Pilot-study guidance in clinical research makes the same point about trials, where a pilot should test whether a design can be carried out \citep{thabane2010tutorial}, and a small pilot gives no meaningful effect size for planning a later study \citep{leon2011role}.
+
+This paper is that feasibility study for a matched-foil citation probe on ASQA \citep{stelmakh2022asqa}. The design came from an automated research pipeline that was built to estimate the foil and self-span contrast and a position effect. It was not designed to measure eligibility. The development run measured the probe's yield, a second run measured it again on a disjoint reserved pool, and the yield analysis was specified after both runs had finished, so the study is exploratory throughout. Its main result is negative. The implemented matched-foil probe could not be run at the scale its contrast needs under this reader, prompt and eligibility specification, and the paper locates where the items were lost. A participant flow through each stage and prespecified criteria for deciding whether to proceed are standard reporting items for pilot trials \citep{eldridge2016consort}, so the method is ordinary, and the contribution is the measured yield of this probe family together with what it implies. We make three contributions.
+
+\begin{itemize}
+\item
+  A measured feasibility outcome, a filter-by-filter count of where a doctored-passage probe with a matched foil loses its items, on every item of two disjoint ASQA pools, with the reserved pool measured on reserved seeds (Sections 4.1 and 4.2).
+\item
+  Evidence that, under this reader and prompt, the losses after parsing concentrate in two filters, the self-span rule and the composite foil and duplicate filter, and a demonstration that, because the first filters do not depend on the seed, added seeds re-draw only the seeded filters over the same few survivors and in these runs added no new items (Section 4.2).
+\item
+  What the measured yield implies for the pool size and filter changes of a full study, with the per-arm counts reported only as diagnostics, since the reserved-pool seeds failed the positive-control validity check (Sections 4.3 and 5).
+\end{itemize}
+
+\section{Related Work}\label{related-work}
+
+\paragraph{Doctored-passage probes and their controls.} \citet{wallat2025correctness} keep citation correctness, whether a cited document supports the statement, apart from citation faithfulness, whether the model actually relied on it. For the second they append two to four tokens of a generated answer to a passage, draw pools from 1,444 NaturalQuestions questions, and retain a pair only if the original statement comes back in the regenerated answer, as it did in 63\% to 70\% of cases. The preprint of \citet{khan2026attributable} plants the four consecutive words of the claim that carry the most characters and scores every record, with no condition on span recovery. Its no-planting control, in the random-passage variant, cites the doctored passage in 17 of 7,625 records. Like both, our design planted a span from the answer, but it drew that span only from the first answer sentence containing a gold alias, which neither paper requires. It also added a matched foil that neither paper runs. Among parsed answers, Section 4 finds nearly all the losses at the filters behind these two additions under this reader and prompt (the second of them also carries a duplicate check), though the records cannot pull the rules apart from the zero-shot prompt or the 3B reader.
+
+\paragraph{Knowledge-conflict edits.} Entity substitution after \citet{longpre2021entity} swaps the answer entity in a passage and keeps answers of only five entity types. \citet{xie2024adaptive} filter their conflict pools in four steps, and on POPQA what survives drops from 14,267 items to somewhere between 3,787 and 9,544, depending on the model. \citet{tan2024blinded} find that readers prefer a generated context to a retrieved one even when the generated context is wrong. These studies edit the passage as our probe does. \citet{xie2024adaptive} also condition on model behaviour before treatment, and their retention stays at a quarter of the pool or more. Ours kept under one percent at the point estimate, with upper 95\% bounds below two percent, and it lost most items at filters that look at the answer's surface form.
+
+\paragraph{Attribution metrics and what their rates estimate.} \citet{rashkin2023measuring} define support by what a generic hearer would affirm from the identified source, while \citet{jacovi2020towards} want faithfulness graded and held apart from plausibility. ALCE \citep{gao2023enabling} makes support into NLI-based citation recall and precision on ASQA, using judges of the sort TRUE meta-evaluates \citep{honovich2022true}. Generative search engines fully support only about half their sentences \citep{liu2023evaluating}, and no one faithfulness metric holds up across evaluation settings \citep{zhang2024finegrained}. An explanation can read as plausible even when the features behind the answer go unmentioned \citep{turpin2023language}. Work that improves citations, whether through fine-grained rewards for citation quality \citep{huang2024training} or by picking evidence before generating \citep{slobodkin2024attribute}, is judged with these support metrics, which ask if a citation is supported. A planting probe asks something else, whether a citation follows a controlled edit. Its rate covers only the items it admits, so every rate it reports needs the admitted count next to it.
+
+\paragraph{Position effects.} Readers make the best use of evidence placed at the start or end of a long context \citep{liu2024lost}. Most models \citet{xie2024adaptive} test are sensitive to evidence order, and one irrelevant sentence added to a problem can cut a model's accuracy sharply \citep{shi2023large}. \citet{cuconasu2024power} find that adding random documents to a retrieved set can raise accuracy. This literature motivated the random-boundary arm of our design. A position contrast needs admitted items in every position cell, and our runs admitted at most four.
+
+\paragraph{Attribution by ablation and model internals.} Leave-one-out attribution removes one source at a time and measures the change in the response's log-probability \citep{liu2025attribot}. ContextCite \citep{cohenwang2024contextcite} instead fits a sparse surrogate model of the output on random context ablations, AttriBoT \citep{liu2025attribot} makes leave-one-out attribution far cheaper, and MIRAGE \citep{qi2024model} attributes answers through model internals on a subset of XOR-AttriQA restricted to answers that match the annotation. \citet{vandort2026how} patch activations on prompts that share one structural template. These methods lower the cost of each item, while the binding constraint in our runs was the number of items.
+
+\paragraph{Pilot studies, power and pipeline reliability.} \citet{leon2011role} argue that a pilot study cannot supply a meaningful effect size for planning a later study, because estimates from small samples are too imprecise, and that its proper output is feasibility. \citet{thabane2010tutorial} add that a pilot needs clear feasibility objectives and clear criteria for judging its success, and the CONSORT extension for pilot and feasibility trials asks authors to report any prespecified criteria for deciding whether to proceed to a definitive trial \citep{eldridge2016consort}. Our study falls short of that standard, since its yield analysis and test bounds were specified after both runs had finished. Within NLP, many comparisons are underpowered, and \citet{card2020little} call for power analysis up front, while \citet{dror2018hitchhiker} map significance tests to the designs they suit. Our sizing defect, a hard-coded eligibility prior that won out over a measured pilot rate, is the kind of hidden technical debt \citet{sculley2015hidden} describe in machine learning systems.
+
+\paragraph{Nearest neighbours.} The closest work is \citet{khan2026attributable}, whose probe and open questions our design extended, followed by \citet{wallat2025correctness}, whose probe both build on. Relative to both, this paper reports no new migration rate. It reports how far the filters implementing a stricter self-span rule and a matched foil shrank the admissible pool under one reader and prompt, measured on two disjoint pools, and what that shrinkage implies for any extension of their probe that conditions on the answer's wording.
+
+\section{Method}\label{method}
+
+\paragraph{Reader, passages and pools.} The experiment plan (SHA-256 \texttt{1e1d4f47...8f958}) used the ASQA evaluation file of ALCE with the top 100 GTR passages per question \citep{ni2022large} as packaged by ALCE \citep{gao2023enabling}, 948 questions split into a 544-item development pool and a disjoint 404-item reserved pool. The archive, the tables and the figures keep the pipeline's name for the reserved pool and its run, confirmation, which labels the data and implies no confirmatory test. The reader was Qwen2.5-3B-Instruct \citep{qwen2024qwen25} with greedy decoding, five passages labelled {[}1{]} to {[}5{]} in context, and up to 300 new tokens. It ran in float16 on an 8 GB NVIDIA RTX 2080 Super, which has no bf16 support, and zero-shot, because the ALCE prompt file with the two planned demonstrations was never downloaded. Both are recorded deviations.
+
+\paragraph{Eligibility filters.} An item entered only if it passed the filters in order (Figure~\ref{fig:method}). Filter c1 requires a gold alias in some in-context passage. Filter c3 requires the baseline answer's citation markers to parse. Filter c4, as implemented, takes the first answer sentence that contains a gold alias as the self span and requires that sentence to carry a citation marker. These three read only the item and the greedy baseline answer, so they act identically on every seed. The seeded filters follow. Filter c5 requires a valid uncited target passage in the sampled slot stratum. Filter c6 requires a topical foil, a sentence from the item's own rank 6 to 20 passages that matches the self span within 10\% in length, 0.3 nats in mean token log-perplexity and 0.05 in embedding similarity to the question, contains no gold alias or answer token, and does not contradict the answer under an NLI judge. The same label also counts a duplicate check in the random-boundary foil arm, so c6 is a composite of the foil match and that check, and the records do not say how many of its exclusions each part made. Filter c7 requires a valid entity swap. The code also checks a stratum quota (c2), a random boundary, a positive-control donor (c8) and a baseline margin (c9), and none of these excluded an item on any seed.
+
+\paragraph{Arms and outcome.} Each admitted item ran under eight arms, the unedited baseline, the self span appended at the end of an uncited target passage or at a random internal sentence boundary, the topical foil at the same two positions, an entity-swap foil at the end whose donor entity comes from every other item of the pool where the plan named another eligible item's answers, a null arm that appends a newline, and a positive control that relocates donor evidence into the target slot, with the donor drawn from the covered items of the pool where the plan named an unrelated eligible item. The code keeps null rows at the self-span arm's observed kept rate, and every null row of both runs is present in the per-seed records, which log no drop count. The outcome was the intention-to-treat migration rate, the share of measurements in which the target passage becomes newly cited while the answer's set of gold aliases stays unchanged. The code set the topical foil at the end as the primary condition and the self span at the end as its comparator. The plan's primary contrasts compared the topical foil at the end with the null edit and the self span at the end with the self span at a random boundary, a recorded deviation.
+
+\paragraph{Runs.} The development run scanned all 544 items on seeds 0 to 3. A fifth development seed never completed, since a first attempt hit the harness's hard stop and a resumed attempt was stopped by the operator. The confirmation run then executed the same code, byte-identical to the development sandbox, on reserved seeds 101, 102 and 103, scanning all 404 items of the confirmation pool on each seed. Before each run a pilot scanned part of the pool, and a sizing step chose the items per seed from a hard-coded eligibility prior of 0.3.
+
+\paragraph{Claim, bounds and analysis.} The experiment was designed to estimate migration under self-span and foil plants. Measuring yield was neither its design aim nor pre-registered. A development-only report of 2026-09-30, written before the reserved-pool run started, measured the development yield and left the reserved pool's yield unknown, without predicting it. The yield claim and three numeric bounds were set on 2026-10-01, after both runs had finished and after a summary print had shown one reserved seed's admitted count and some reserved-pool per-arm values. The bounds serve as exploratory consistency checks and carry no confirmatory weight. They asked whether the distinct yield fell under 2\%, whether c4 removed between 65\% and 85\% of parsed answers on every reserved seed, and whether c6 removed at least 80\% of the items that reached it on every reserved seed. A distinct yield of 9 or more items out of 404 would have failed the first bound. A fourth check, identical c1, c3 and c4 counts across seeds, tests only that those three filters behaved the same on every seed. We report yields as distinct admitted items over items scanned, with \citet{wilson1927probable} score intervals, which keep their coverage near zero where a normal interval does not. Repeated seeds on the same item count as repeated measurements of that item. For the arms we report counts only, the moves over all measurements and the moves per item, because each arm's statistic averages repeated measurements within an item and a binomial interval does not describe it at two or four items. No hypothesis test is reported, because no contrast is claimed. Appendix A records how the claim was chosen.
+
+\begin{figure*}[t]
+\centering
+\includegraphics[width=\textwidth]{figures/method.pdf}
+\caption{The probe as the archived code ran it. The seed-independent filters c1, c3 and c4 act identically on every seed, and the seeded filters c5 to c7 follow. The orange boxes mark the two filters that removed most of the items reaching them. The blue boxes run once before the seeds, and the dashed edges show that sizing used a fixed prior in place of the pilot's measured rate.}
+\label{fig:method}
+\end{figure*}
+
+
+\section{Results}\label{results}
+
+\subsection{Yield on the reserved pool}\label{yield-on-the-reserved-pool}
+
+The observed counts satisfied the three bounds, which were specified after both runs, and filters c1, c3 and c4 gave identical counts on every reserved seed (Table~\ref{tab:t1}). Every reserved seed scanned the 404 items, generated 330 baseline answers for the items that passed c1, and parsed 317 of them. Filter c4 then removed 256 of the 317 on each seed, 81\% of the parsed answers. The seeded filters acted on the 61 items that remained. Filter c5 removed 10 to 17, and c6 removed 41 of 44, 48 of 51 and 46 of 48 of the items that reached it. Each seed admitted 2 items, and they were the same 2 items on all three seeds, one in the single-source stratum and one in the redundant stratum. The distinct yield is 2 of 404, or 0.50\% with a Wilson 95\% interval of 0.14\% to 1.79\%, against a design target of 50 items per seed.
+
+\begin{table*}[t]
+\centering
+\small
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{lrrrrrrrrrr}
+\toprule
+Pool & Seed & Scanned & c1 & c3 & c4 & c5 & c6 & c7 & Admitted & Target \\
+\midrule
+confirmation & 101 & 404 & 74 & 13 & 256 & 17 & 41 & 1 & 2 & 50 \\
+confirmation & 102 & 404 & 74 & 13 & 256 & 10 & 48 & 1 & 2 & 50 \\
+confirmation & 103 & 404 & 74 & 13 & 256 & 13 & 46 & 0 & 2 & 50 \\
+development & 0 & 544 & 109 & 13 & 327 & 21 & 69 & 1 & 4 & 32 \\
+development & 1 & 544 & 109 & 13 & 327 & 21 & 72 & 0 & 2 & 32 \\
+development & 2 & 544 & 109 & 13 & 327 & 25 & 68 & 0 & 2 & 32 \\
+development & 3 & 544 & 109 & 13 & 327 & 23 & 71 & 0 & 1 & 32 \\
+\bottomrule
+\end{tabular}
+\caption{Items each eligibility filter excluded on each seed, in the order applied, with the per-seed item target the sizing code chose, from the per-seed records of each run's harness file. The quota check c2 excluded no item and has no column.}
+\label{tab:t1}
+\end{table*}
+
+
+\subsection{Where the items are lost}\label{where-the-items-are-lost}
+
+The development pool shows the same pattern (Table~\ref{tab:t1}, Figure~\ref{fig:eligibility_funnel}). Filters c1 and c3 removed 109 and 13 items on every seed, leaving 422 parsed answers, and c4 removed 327 of them. The seeded filters acted on the remaining 95, where c6 removed nearly all of the 70 to 74 items that reached it. The four seeds admitted 4, 2, 2 and 1 items, and seeds 1 to 3 admitted subsets of seed 0's four, so the development run measured 4 distinct items in 9 item-seed measurements. Its distinct yield of 4 of 544 has a Wilson 95\% interval of 0.29\% to 1.88\%, which contains the confirmation estimate. Taken together, the two runs admitted 6 of 948 questions, 0.63\%, and the interval runs from 0.29\% to 1.37\%.
+
+Among parsed answers, two filters account for nearly all the loss. Filter c4 removed 77\% of parsed answers in development and 81\% on the confirmation pool. Across all scanned items c4 and c6 account for about three quarters of the exclusions, and the coverage filter c1, a condition the earlier probes also face, accounts for most of the rest. The records count these exclusions together and do not separate answers with no sentence that contains a gold alias, answers whose first such sentence has no marker, and markers that failed to parse at the sentence level. Filter c6 then removed between 93\% and 99\% of what reached it across the seven seeds. Nothing in the records says which tolerance bound, or how many of these exclusions the duplicate check made rather than the foil match, so the c6 losses cannot be pinned on the foil requirement alone. Since c1, c3 and c4 ignore the seed, the eligible set is settled before any seeded choice is made, and a further seed can do no more than re-draw the seeded filters over the same few survivors. The records bear this out, since every confirmation seed admitted the same two items.
+
+The sizing step did not see this coming on either pool. Each pilot scanned at least 10 items and stopped at its first eligible item, so its rate is a single waiting-time draw, and the development pilot found 1 eligible item in 127 scans and the confirmation pilot 1 in 62. The code estimated its scans from a hard-coded eligibility prior of 0.3 instead, chose 32 items per development seed to fit its time budget and 50 per confirmation seed, its cap, and expected 167 scans per confirmation seed. At the confirmation pilot's own rate, 50 items would need 3,100 scans per seed against a pool of 404. The plan itself had expected 50\% to 60\% of scanned items to be eligible.
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\columnwidth]{figures/eligibility_funnel.pdf}
+\caption{Items remaining after each eligibility filter on every seed of the development pool (left, 544 items) and the confirmation pool (right, 404 items), on a log scale. The first three filters act identically on every seed. Filter c4 and the composite foil and duplicate filter c6 remove most items. The dashed line marks the per-seed design target.}
+\label{fig:eligibility_funnel}
+\end{figure}
+
+
+\subsection{Per-arm diagnostics}\label{per-arm-diagnostics}
+
+The per-arm results cannot be read as estimates. The positive control, an arm built so that the citation must move, never cited its target on the two reserved-pool items, and the pipeline therefore marked all three reserved seeds invalid. Its donor came from other covered items of the pool rather than an unrelated eligible item, a recorded deviation that the run's own analysis expected to fail. Everything in this subsection is a diagnostic of the instrument, reported so that a full study can avoid the same faults.
+
+Table~\ref{tab:t2} and Figure~\ref{fig:arm_rates} give the counts for every arm. On the reserved pool each arm was measured 6 times on 2 items, and on the development pool 9 times on 4 items. The run's analysis also found that some self spans were malformed, one keeping the meta-reference "According to the information provided in Document" and another starting mid-clause, that one of the two reserved-pool topical foils is itself a sentence fragment, and that the code's answer-flip classifier misclassified logged rows in both directions. In 2 topical-foil measurements on the reserved pool the target became cited while the classifier recorded a changed answer, which the outcome scores as no move, and Table~\ref{tab:t2} gives the target-cited count of every arm beside its migration count. Given the classifier's errors we draw no conclusion from these counts. We note only that an outcome requiring an unchanged answer can mask citation moves in principle, for any edit that perturbs the answer.
+
+\begin{table*}[t]
+\centering
+\small
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{lrrrrrr}
+\toprule
+Arm & Conf. moves & Conf. per item & Conf. target cited & Dev. moves & Dev. per item & Dev. target cited \\
+\midrule
+baseline, unedited & 0 of 6 & 0/3, 0/3 & 0 of 6 & 0 of 9 & 0/1, 0/1, 0/3, 0/4 & 0 of 9 \\
+null edit & 0 of 6 & 0/3, 0/3 & 0 of 6 & 0 of 9 & 0/1, 0/1, 0/3, 0/4 & 0 of 9 \\
+positive control & 0 of 6 & 0/3, 0/3 & 0 of 6 & 3 of 9 & 3/4, 0/1, 0/1, 0/3 & 5 of 9 \\
+self span, end & 3 of 6 & 3/3, 0/3 & 3 of 6 & 1 of 9 & 1/4, 0/1, 0/1, 0/3 & 1 of 9 \\
+self span, random & 2 of 6 & 2/3, 0/3 & 2 of 6 & 3 of 9 & 3/4, 0/1, 0/1, 0/3 & 4 of 9 \\
+topical foil, end & 0 of 6 & 0/3, 0/3 & 0 of 6 & 0 of 9 & 0/1, 0/1, 0/3, 0/4 & 3 of 9 \\
+topical foil, random & 0 of 6 & 0/3, 0/3 & 2 of 6 & 0 of 9 & 0/1, 0/1, 0/3, 0/4 & 0 of 9 \\
+entity-swap foil, end & 3 of 6 & 2/3, 1/3 & 4 of 6 & 1 of 9 & 1/3, 0/1, 0/1, 0/4 & 5 of 9 \\
+\bottomrule
+\end{tabular}
+\caption{Intention-to-treat migration count of each arm on the reserved pool (2 items, reserved seeds 101 to 103) and the development pool (4 items, seeds 0 to 3), the same count split by item as moves over measurements, and the count of measurements in which the target became cited whatever happened to the answer. Conf. and Dev. mark the reserved (confirmation) and development pools. No interval is given, because each arm's statistic averages repeated measurements within an item, and no cell is set in bold because the table supports no comparison between arms. Every reserved-pool seed failed the positive-control validity check.}
+\label{tab:t2}
+\end{table*}
+
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\columnwidth]{figures/arm_rates.pdf}
+\caption{Intention-to-treat migration rate of each arm, with each admitted item's own rate as an open marker and the item mean as a filled marker, for the development pool (4 items, 9 measurements per arm) and the reserved (confirmation) pool (2 items, 6 measurements per arm). Every reserved-pool seed failed the positive-control validity check, so the figure is a diagnostic and supports no contrast between arms.}
+\label{fig:arm_rates}
+\end{figure}
+
+
+\section{Discussion}\label{discussion}
+
+\paragraph{The main result.} The implemented matched-foil experiment could not be executed at the required scale under the chosen eligibility rules. It admitted 2 of 404 reserved-pool items and 4 of 544 development items, 6 of 948 in all, and two filters did most of the damage, c4 removing 77\% to 81\% of parsed answers and the composite c6 removing 93\% to 99\% of what reached it. This is a statement about one reader, one prompt and one eligibility specification on ASQA, and it does not show that matched-foil citation probes are infeasible in general.
+
+\paragraph{What a full study would need.} The plan sized its confirmation contrast for a 95\% half-width of about 6.2 percentage points on the self minus foil difference, which, at its assumed discordance of 0.15, takes 150 paired items. With the 2 reserved-pool items the same normal approximation gives about 53.7 points, a figure that only shows the scale, since the approximation means nothing at that size. At the reserved-pool yield of 0.50\%, 150 admitted items would require about 30,300 questions, and even at the upper end of its interval, 1.79\%, about 8,400 (Figure~\ref{fig:pool_projection}). ASQA's evaluation split has 948, and any larger pool would come from other datasets whose yield under this design is unmeasured. No split of ASQA can close that gap with this design under this reader and prompt, so the filters have to change before any contrast is attempted, and each change should be tested on a measured yield. A rerun that scans each item once faces the same arithmetic, because extra seeds re-draw only the seeded filters over the items that survived c4.
+
+\paragraph{Which filters to change.} Filter c4 is the first candidate. It could take the span as \citet{khan2026attributable} do, from the claim sentence without an alias requirement, or the reader could be given the ALCE demonstrations it lacked, which may change how often it cites the sentence that names the answer. Filter c6 is the second. The approved topic sketch proposed drawing the foil from another record's answer within the same question cluster, which removes the need to find a matching sentence in the item's own low-ranked passages, and its match tolerances should be checked on a pilot before the run commits. Two operational fixes follow from the records. A sizing step should divide the item target by the pilot's measured rate and refuse a pool that cannot supply it, which on both pools would have stopped the run before its first seed. Caching the greedy baseline answers would also save time, because they never change with the seed, yet every development seed generated all 435 of them again and ran for 16,884 s to 18,537 s.
+
+\paragraph{Reading the per-arm diagnostics.} Table~\ref{tab:t2} cannot settle the question the experiment was built for, whether a matched foil moves citations as often as a self span, in either direction. With two items, three moves in six measurements and none in six differ by one item, and the reserved-pool seeds were all marked invalid because the positive control failed. The arm records do raise a measurement issue a full study must settle first. An outcome that requires an unchanged answer can mask citation moves for any edit that perturbs the answer, so a full study should validate its answer-equivalence check by hand, report the target-cited rate beside the intention-to-treat rate for every arm, and build its positive control from the item's own supporting sentence.
+
+\paragraph{Questions left by topic selection.} The review that selected this topic left three questions open. Whether a floor effect is an internal or an external validity failure remains open, because no arm was measured on enough items to reach a floor. Whether topical relevance can be matched closely enough to build the foil remains open for this foil source. Filter c6 as implemented removed 93\% to 99\% of the items that reached it on every seed of both pools, but the records do not say which of its checks bound, so that review's fallback of drawing the foil from within the question cluster is the design to test next. Whether a citation list that contains the doctored passage counts as a move also remains open, because the code scored a move when the target became newly cited anywhere in the answer and no item set was large enough to compare that rule with a single-citation rule.
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\columnwidth]{figures/pool_projection.pdf}
+\caption{Questions a study would need to scan to admit a given number of items, at the confirmation yield (0.50\%), the pooled yield over both pools (0.63\%), the upper end of the confirmation interval (1.79\%) and the plan's assumed rate of 50\%. The dotted lines mark the 948 ASQA evaluation questions and the 404-item confirmation pool, and the vertical line marks the plan's 150 confirmation items.}
+\label{fig:pool_projection}
+\end{figure}
+
+
+\section*{Limitations}\label{limitations}
+
+The yield is a property of this code, this reader and this prompt on ASQA, and it is not an estimate of how often readers restate gold aliases in general. The reader ran zero-shot because the demonstrations were missing, the first-sentence form of c4 is an implementation choice, and the reader is a 3B model, so any of the three may account for part of the c4 losses, and the records do not separate them. Filter c6 combines the foil match with a duplicate check, and the records do not separate those either. The plan's baseline block named no published number to reproduce, so no baseline reproduction was checked. The reserved-pool run admitted 2 distinct items, each re-measured on three seeds, and the development run admitted 4 distinct items in 9 measurements, short of the 150 and 250 items the plan required. The seeds within each pool re-scanned the same items, so they are repeated measurements of those items, and the yield intervals treat the distinct items as the sample. The development run recorded four of its five planned seeds.
+
+Every reserved-pool seed failed the positive-control validity check, so no per-arm result is evidence about the probe. The yield analysis and its bounds were specified after both runs had finished, and after a summary print had exposed one reserved seed's admitted count and some reserved-pool per-arm values, so every result here is exploratory. The run deviated from its plan in 13 recorded ways, among them the dtype, the zero-shot prompt, the item and seed counts, the primary contrast and the chosen statistic, and the plan itself departed from the approved topic sketch in dataset, reader count and foil source. Appendix A gives the run's own quality verdict and the process record.
+
+\section*{Statements}\label{statements}
+
+\paragraph{Provenance.} All numbers about the runs come from the archived development and reserved-pool records, the per-seed file of the reserved-pool run, the analysis summary, the experiment plan and the experiment code, all published in the repository under \texttt{results/} and \texttt{code/}. Figures come out of \texttt{figures/make\_figures.py}, which reads those same records. Exclusions are read from the per-seed records. The reserved-pool results file also has a run-wide eligibility counter, but it tallies calls to the eligibility check, and one item can trigger that check more than once. Some answer strings in the development records were decoded twice as UTF-8, so an apostrophe may show up as three characters. No count or number in the paper depends on them.
+
+\paragraph{Data and code availability.} ASQA and the ALCE passages are public (\texttt{princeton-nlp/ALCE-data}). Code, per-seed run records, analysis files and figure scripts live at \url{https://github.com/cmu-publications/how-many-items-survive-a-doctored-passage-citation-probe-a}, and the v1.0 release tag pins the commit used here. A clean install from the archived \texttt{requirements.txt}, followed by a smoke test, gave back the reserved-pool records' condition and metric names (Appendix A).
+
+\paragraph{Ethics.} Only public question-answering data went into this study, and nobody was recruited as a participant.
+
+\paragraph{Author contributions.} Mohamed Farag came up with the study, supervised it, and reviewed and edited the manuscript. An automated pipeline of large language model agents, run under the author's supervision, carried out the experiments and the analysis and wrote the first draft.
+
+\paragraph{Competing interests and funding.} There are no competing interests to declare, and no grant funded this work.
+
+\section{Appendix A. Run record}\label{appendix-a.-run-record}
+
+\paragraph{Quality verdict of the run.} After the reserved-pool run the pipeline's decision step rated its own analysis 2 of 10 and voted to refine the code rather than proceed, citing the failed positive control and four arms with identical zero rates across seeds. A refinement would have rerun the same code on the same reserved seeds, so the author overrode the vote and had the results on record written up as this feasibility study.
+
+\paragraph{How the claim was chosen.} A panel of six model-simulated reviewers, separate from the one that selected the topic, read the development records only and chose the yield claim, six votes of six at high confidence. These reviews informed the framing and serve as no evidence. The numeric bounds were written after the reserved-pool run had finished and before its per-seed records were read, and the earlier exposure of one seed's admitted count is the reason the result is labelled exploratory.
+
+\paragraph{Development run.} A fifth development seed never completed. A first attempt hit the harness's hard stop, and a resumed attempt was stopped by the operator, after which the run ended with four recorded seeds and a shortfall record listing 4, 2, 2 and 1 admitted items against 32 planned per seed.
+
+\paragraph{Code audit.} A syntax-tree read of the archived code finds one generation call, in \texttt{baselines.py}, which passes a \texttt{GenerationConfig} with \texttt{do\_sample=False} and \texttt{max\_new\_tokens=300}, matching the plan's greedy decoding and token budget. The entry point \texttt{main.py} defines its hyperparameters itself, and \texttt{hp\_schema.py} only validates them. The code under \texttt{code/} and the code both runs executed are byte-identical. The null arm appends a newline to the target passage, as the plan specifies. Under greedy decoding a change in citation after that edit is attributed to the edit, and the admitted items reproduced their baseline answers deterministically under the tested reruns, a check the code ran on the admitted items only.
+
+\paragraph{Kill criteria from topic selection.} Of the nine kill criteria set when the topic was selected, the code implemented related but different rules for five. Determinism was checked by regenerating the unedited baseline and gating the rerun at 1.0, on the admitted items only, where the criterion asked for the no-plant arm to reproduce the clean answer on every record. The remaining four cover foil construction, where length, perplexity and NLI tolerances stood in for word-count and frequency-band matching, and relevance, where embedding similarity to the question stood in for a lexical-overlap gap. They also cover the locked margin, an effect threshold of 3 points with an equivalence margin of 5 against the criterion's band of 3, and parsing, a parse-success gate of 0.9 instead of one cited passage per scored claim on 95\% of generations. Four criteria went unprobed before the run, namely the self-span floor, the noise ceiling on clean uncited passages, the cell-size rule of at least 150 of 200 questions surviving in every position by dataset cell, and the 14-hour budget. Had it been checked, the cell-size rule would have halted the run on either pool, and the budget rule the development run.
+
+\paragraph{Clean-room reinstall.} A fresh virtual environment without system packages received the 11 archived requirements, taking torch from the CUDA 12.8 wheel index. It then ran \texttt{setup.py} and a smoke run of \texttt{main.py}, whose results carried the same condition names and metric keys as the archived reserved-pool results. Earlier attempts had failed inside the check itself and were fixed before this run.
+
+\bibliographystyle{acl_natbib}
+\bibliography{references}
+
+\end{document}

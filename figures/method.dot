@@ -1,0 +1,32 @@
+digraph G {
+  graph [rankdir=TB, fontname="Arial", fontsize=13, nodesep=0.3, ranksep=0.45, pad=0.15, newrank=true];
+  node [shape=box, fontname="Arial", fontsize=12, style="filled", fillcolor="#FFFFFF", color="#404040", penwidth=1.2, margin="0.12,0.06"];
+  edge [fontname="Arial", fontsize=10.5, color="#404040"];
+
+  pilot [label="Pilot scan\ndev 1 of 127, conf 1 of 62", fillcolor="#E3F1FB", color="#0072B2", penwidth=2];
+  sizing [label="Sizing with prior 0.3\n32 (dev) or 50 (conf) items per seed", fillcolor="#E3F1FB", color="#0072B2", penwidth=2];
+
+  subgraph cluster_s { label="Seed-independent filters, identical on every seed"; color="#9A9A9A"; style=rounded; fontsize=11;
+    pool [label="Pool\ndev 544, conf 404"];
+    c1 [label="c1 gold alias\nin context"];
+    ans [label="Greedy answer\nQwen2.5-3B, zero-shot"];
+    c3 [label="c3 markers\nparse"];
+    c4 [label="c4 first alias\nsentence cited", fillcolor="#FBE3D6", color="#D55E00", penwidth=2.5];
+  }
+  subgraph cluster_r { label="Seeded filters and arms"; color="#9A9A9A"; style=rounded; fontsize=11;
+    c5 [label="c5 target\npassage"];
+    c6 [label="c6 topical foil\nand duplicate check", fillcolor="#FBE3D6", color="#D55E00", penwidth=2.5];
+    c7 [label="c7 entity\nswap"];
+    arms [label="8 arms per admitted item\nbaseline, null, positive control,\nself span (end, random),\ntopical foil (end, random),\nentity-swap foil (end)"];
+    out [label="Per-seed record\nexclusions, admitted ids,\nITT migration per arm"];
+  }
+  pilot -> sizing [style=dashed, label="  measured rate not used"];
+  sizing -> pool [style=dashed];
+  pool -> c1 -> ans -> c3 -> c4;
+  c4 -> c5 [constraint=false];
+  pool -> c5 [style=invis];
+  pilot -> pool [style=invis];
+  c5 -> c6 -> c7 -> arms -> out;
+  {rank=same; pool; c1; ans; c3; c4;}
+  {rank=same; c5; c6; c7; arms; out;}
+}

@@ -1,0 +1,3951 @@
+{
+  "smoke": false,
+  "seed_set": "confirmation",
+  "design_contract": 2,
+  "condition_names": [
+    "baseline_unedited_alce_citation",
+    "self_span_end_injection",
+    "topical_foil_end_injection",
+    "entity_swap_foil_end_injection",
+    "self_span_random_injection",
+    "topical_foil_random_injection",
+    "null_random_drop_trailing_whitespace_edit",
+    "positive_control_planted_evidence_relocated"
+  ],
+  "per_seed": {
+    "101": {
+      "baseline_unedited_alce_citation": {
+        "itt_citation_migration_rate": 0.0,
+        "primary_metric": 0.0,
+        "target_cited_rate": 0.0,
+        "answer_flip_rate": 0.0,
+        "conditional_migration_rate": 0.0,
+        "conditional_migration_rate_intersection": null,
+        "citation_parse_rate": 0.9606060606060606,
+        "delta_logp_target_id_mean": 0.0,
+        "n_delta_none": 0,
+        "neighbor_next_excess": null,
+        "neighbor_prev_excess": null,
+        "alce_recall": 0.08333333333333333,
+        "alce_precision": 0.16666666666666669,
+        "natural_location_rate": null,
+        "near_tie_concentration": null,
+        "baseline_determinism_rate": 1.0,
+        "n_items": 2,
+        "re_sourcing_share": null,
+        "post_rationalization_share": null,
+        "mixed_share": null,
+        "undefined_share": null,
+        "re_sourcing_share_single_source": null,
+        "post_rationalization_share_single_source": null,
+        "mixed_share_single_source": null,
+        "undefined_share_single_source": null,
+        "itt_single_source": 0.0,
+        "itt_redundant": 0.0,
+        "itt_early": 0.0,
+        "itt_late": 0.0,
+        "itt_tercile_0": 0.0,
+        "itt_tercile_1": 0.0,
+        "itt_tercile_2": null
+      },
+      "self_span_end_injection": {
+        "itt_citation_migration_rate": 0.5,
+        "primary_metric": 0.5,
+        "target_cited_rate": 0.5,
+        "answer_flip_rate": 0.0,
+        "conditional_migration_rate": 0.5,
+        "conditional_migration_rate_intersection": null,
+        "citation_parse_rate": 1.0,
+        "delta_logp_target_id_mean": 5.1625414093335475,
+        "n_delta_none": 0,
+        "neighbor_next_excess": 0.0,
+        "neighbor_prev_excess": 0.0,
+        "alce_recall": 0.0,
+        "alce_precision": 0.0,
+        "natural_location_rate": null,
+        "near_tie_concentration": 1.0,
+        "baseline_determinism_rate": null,
+        "n_items": 2,
+        "re_sourcing_share": 0.0,
+        "post_rationalization_share": 0.0,
+        "mixed_share": 1.0,
+        "undefined_share": 0.0,
+        "re_sourcing_share_single_source": 0.0,
+        "post_rationalization_share_single_source": 0.0,
+        "mixed_share_single_source": 1.0,
+        "undefined_share_single_source": 0.0,
+        "itt_single_source": 1.0,
+        "itt_redundant": 0.0,
+        "itt_early": 0.0,
+        "itt_late": 1.0,
+        "itt_tercile_0": 1.0,
+        "itt_tercile_1": 0.0,
+        "itt_tercile_2": null
+      },
+      "topical_foil_end_injection": {
+        "itt_citation_migration_rate": 0.0,
+        "primary_metric": 0.0,
+        "target_cited_rate": 0.0,
+        "answer_flip_rate": 0.5,
+        "conditional_migration_rate": 0.0,
+        "conditional_migration_rate_intersection": null,
+        "citation_parse_rate": 1.0,
+        "delta_logp_target_id_mean": -0.1243581771850586,
+        "n_delta_none": 0,
+        "neighbor_next_excess": 0.0,
+        "neighbor_prev_excess": 0.0,
+        "alce_recall": 0.0,
+        "alce_precision": 0.0,
+        "natural_location_rate": null,
+        "near_tie_concentration": null,
+        "baseline_determinism_rate": null,
+        "n_items": 2,
+        "re_sourcing_share": null,
+        "post_rationalization_share": null,
+        "mixed_share": null,
+        "undefined_share": null,
+        "re_sourcing_share_single_source": null,
+        "post_rationalization_share_single_source": null,
+        "mixed_share_single_source": null,
+        "undefined_share_single_source": null,
+        "itt_single_source": 0.0,
+        "itt_redundant": 0.0,
+        "itt_early": 0.0,
+        "itt_late": 0.0,
+        "itt_tercile_0": 0.0,
+        "itt_tercile_1": 0.0,
+        "itt_tercile_2": null
+      },
+      "entity_swap_foil_end_injection": {
+        "itt_citation_migration_rate": 0.5,
+        "primary_metric": 0.5,
+        "target_cited_rate": 1.0,
+        "answer_flip_rate": 0.5,
+        "conditional_migration_rate": 1.0,
+        "conditional_migration_rate_intersection": null,
+        "citation_parse_rate": 1.0,
+        "delta_logp_target_id_mean": 1.555166244506836,
+        "n_delta_none": 0,
+        "neighbor_next_excess": 0.0,
+        "neighbor_prev_excess": 0.0,
+        "alce_recall": 0.0,
+        "alce_precision": 0.0,
+        "natural_location_rate": null,
+        "near_tie_concentration": 0.0,
+        "baseline_determinism_rate": null,
+        "n_items": 2,
+        "re_sourcing_share": 0.0,
+        "post_rationalization_share": 0.0,
+        "mixed_share": 0.0,
+        "undefined_share": 1.0,
+        "re_sourcing_share_single_source": null,
+        "post_rationalization_share_single_source": null,
+        "mixed_share_single_source": null,
+        "undefined_share_single_source": null,
+        "itt_single_source": 0.0,
+        "itt_redundant": 1.0,
+        "itt_early": 1.0,
+        "itt_late": 0.0,
+        "itt_tercile_0": 0.0,
+        "itt_tercile_1": 1.0,
+        "itt_tercile_2": null
+      },
+      "self_span_random_injection": {
+        "itt_citation_migration_rate": 0.5,
+        "primary_metric": 0.5,
+        "target_cited_rate": 0.5,
+        "answer_flip_rate": 0.0,
+        "conditional_migration_rate": 0.5,
+        "conditional_migration_rate_intersection": null,
+        "citation_parse_rate": 1.0,
+        "delta_logp_target_id_mean": 1.8859302202860515,
+        "n_delta_none": 0,
+        "neighbor_next_excess": 0.0,
+        "neighbor_prev_excess": 0.0,
+        "alce_recall": 0.26666666666666666,
+        "alce_precision": 0.75,
+        "natural_location_rate": 0.5,
+        "near_tie_concentration": 0.0,
+        "baseline_determinism_rate": null,
+        "n_items": 2,
+        "re_sourcing_share": 0.0,
+        "post_rationalization_share": 1.0,
+        "mixed_share": 0.0,
+        "undefined_share": 0.0,
+        "re_sourcing_share_single_source": null,
+        "post_rationalization_share_single_source": null,
+        "mixed_share_single_source": null,
+        "undefined_share_single_source": null,
+        "itt_single_source": 0.0,
+        "itt_redundant": 1.0,
+        "itt_early": 1.0,
+        "itt_late": 0.0,
+        "itt_tercile_0": 0.0,
+        "itt_tercile_1": 1.0,
+        "itt_tercile_2": null
+      },
+      "topical_foil_random_injection": {
+        "itt_citation_migration_rate": 0.0,
+        "primary_metric": 0.0,
+        "target_cited_rate": 0.0,
+        "answer_flip_rate": 1.0,
+        "conditional_migration_rate": null,
+        "conditional_migration_rate_intersection": null,
+        "citation_parse_rate": 1.0,
+        "delta_logp_target_id_mean": -0.31598679224650067,
+        "n_delta_none": 0,
+        "neighbor_next_excess": 0.0,
+        "neighbor_prev_excess": 0.0,
+        "alce_recall": 0.0,
+        "alce_precision": 0.0,
+        "natural_location_rate": 0.0,
+        "near_tie_concentration": null,
+        "baseline_determinism_rate": null,
+        "n_items": 2,
+        "re_sourcing_share": null,
+        "post_rationalization_share": null,
+        "mixed_share": null,
+        "undefined_share": null,
+        "re_sourcing_share_single_source": null,
+        "post_rationalization_share_single_source": null,
+        "mixed_share_single_source": null,
+        "undefined_share_single_source": null,
+        "itt_single_source": 0.0,
+        "itt_redundant": 0.0,
+        "itt_early": 0.0,
+        "itt_late": 0.0,
+        "itt_tercile_0": 0.0,
+        "itt_tercile_1": 0.0,
+        "itt_tercile_2": null
+      },
+      "null_random_drop_trailing_whitespace_edit": {
+        "itt_citation_migration_rate": 0.0,
+        "primary_metric": 0.0,
+        "target_cited_rate": 0.0,
+        "answer_flip_rate": 0.0,
+        "conditional_migration_rate": 0.0,
+        "conditional_migration_rate_intersection": null,
+        "citation_parse_rate": 1.0,
+        "delta_logp_target_id_mean": 0.6008186340332031,
+        "n_delta_none": 0,
+        "neighbor_next_excess": null,
+        "neighbor_prev_excess": null,
+        "alce_recall": 0.08333333333333333,
+        "alce_precision": 0.16666666666666669,
+        "natural_location_rate": null,
+        "near_tie_concentration": null,
+        "baseline_determinism_rate": null,
+        "n_items": 2,
+        "re_sourcing_share": null,
+        "post_rationalization_share": null,
+        "mixed_share": null,
+        "undefined_share": null,
+        "re_sourcing_share_single_source": null,
+        "post_rationalization_share_single_source": null,
+        "mixed_share_single_source": null,
+        "undefined_share_single_source": null,
+        "itt_single_source": 0.0,
+        "itt_redundant": 0.0,
+        "itt_early": 0.0,
+        "itt_late": 0.0,
+        "itt_tercile_0": 0.0,
+        "itt_tercile_1": 0.0,
+        "itt_tercile_2": null
+      },
+      "positive_control_planted_evidence_relocated": {
+        "itt_citation_migration_rate": 0.0,
+        "primary_metric": 0.0,
+        "target_cited_rate": 0.0,
+        "answer_flip_rate": 1.0,
+        "conditional_migration_rate": null,
+        "conditional_migration_rate_intersection": null,
+        "citation_parse_rate": 1.0,
+        "delta_logp_target_id_mean": 4.773025532563528,
+        "n_delta_none": 0,
+        "neighbor_next_excess": null,
+        "neighbor_prev_excess": null,
+        "alce_recall": 0.0,
+        "alce_precision": 0.0,
+        "natural_location_rate": null,
+        "near_tie_concentration": null,
+        "baseline_determinism_rate": null,
+        "n_items": 2,
+        "re_sourcing_share": null,
+        "post_rationalization_share": null,
+        "mixed_share": null,
+        "undefined_share": null,
+        "re_sourcing_share_single_source": null,
+        "post_rationalization_share_single_source": null,
+        "mixed_share_single_source": null,
+        "undefined_share_single_source": null,
+        "itt_single_source": 0.0,
+        "itt_redundant": 0.0,
+        "itt_early": 0.0,
+        "itt_late": 0.0,
+        "itt_tercile_0": 0.0,
+        "itt_tercile_1": 0.0,
+        "itt_tercile_2": null
+      }
+    },
+    "102": {
+      "baseline_unedited_alce_citation": {
+        "itt_citation_migration_rate": 0.0,
+        "primary_metric": 0.0,
+        "target_cited_rate": 0.0,
+        "answer_flip_rate": 0.0,
+        "conditional_migration_rate": 0.0,
+        "conditional_migration_rate_intersection": null,
+        "citation_parse_rate": 0.9606060606060606,
+        "delta_logp_target_id_mean": 0.0,
+        "n_delta_none": 0,
+        "neighbor_next_excess": null,
+        "neighbor_prev_excess": null,
+        "alce_recall": 0.08333333333333333,
+        "alce_precision": 0.16666666666666669,
+        "natural_location_rate": null,
+        "near_tie_concentration": null,
+        "baseline_determinism_rate": 1.0,
+        "n_items": 2,
+        "re_sourcing_share": null,
+        "post_rationalization_share": null,
+        "mixed_share": null,
+        "undefined_share": null,
+        "re_sourcing_share_single_source": null,
+        "post_rationalization_share_single_source": null,
+        "mixed_share_single_source": null,
+        "undefined_share_single_source": null,
+        "itt_single_source": 0.0,
+        "itt_redundant": 0.0,
+        "itt_early": 0.0,
+        "itt_late": 0.0,
+        "itt_tercile_0": 0.0,
+        "itt_tercile_1": 0.0,
+        "itt_tercile_2": null
+      },
+      "self_span_end_injection": {
+        "itt_citation_migration_rate": 0.5,
+        "primary_metric": 0.5,
+        "target_cited_rate": 0.5,
+        "answer_flip_rate": 0.0,
+        "conditional_migration_rate": 0.5,
+        "conditional_migration_rate_intersection": null,
+        "citation_parse_rate": 1.0,
+        "delta_logp_target_id_mean": 4.0848013162612915,
+        "n_delta_none": 0,
+        "neighbor_next_excess": 0.0,
+        "neighbor_prev_excess": 0.0,
+        "alce_recall": 0.1,
+        "alce_precision": 0.16666666666666669,
+        "natural_location_rate": null,
+        "near_tie_concentration": 1.0,
+        "baseline_determinism_rate": null,
+        "n_items": 2,
+        "re_sourcing_share": 0.0,
+        "post_rationalization_share": 0.0,
+        "mixed_share": 1.0,
+        "undefined_share": 0.0,
+        "re_sourcing_share_single_source": 0.0,
+        "post_rationalization_share_single_source": 0.0,
+        "mixed_share_single_source": 1.0,
+        "undefined_share_single_source": 0.0,
+        "itt_single_source": 1.0,
+        "itt_redundant": 0.0,
+        "itt_early": 0.0,
+        "itt_late": 1.0,
+        "itt_tercile_0": 1.0,
+        "itt_tercile_1": 0.0,
+        "itt_tercile_2": null
+      },
+      "topical_foil_end_injection": {
+        "itt_citation_migration_rate": 0.0,
+        "primary_metric": 0.0,
+        "target_cited_rate": 0.0,
+        "answer_flip_rate": 0.5,
+        "conditional_migration_rate": 0.0,
+        "conditional_migration_rate_intersection": null,
+        "citation_parse_rate": 1.0,
+        "delta_logp_target_id_mean": -0.19073589642842612,
+        "n_delta_none": 0,
+        "neighbor_next_excess": 0.0,
+        "neighbor_prev_excess": 0.0,
+        "alce_recall": 0.08333333333333333,
+        "alce_precision": 0.16666666666666669,
+        "natural_location_rate": null,
+        "near_tie_concentration": null,
+        "baseline_determinism_rate": null,
+        "n_items": 2,
+        "re_sourcing_share": null,
+        "post_rationalization_share": null,
+        "mixed_share": null,
+        "undefined_share": null,
+        "re_sourcing_share_single_source": null,
+        "post_rationalization_share_single_source": null,
+        "mixed_share_single_source": null,
+        "undefined_share_single_source": null,
+        "itt_single_source": 0.0,
+        "itt_redundant": 0.0,
+        "itt_early": 0.0,
+        "itt_late": 0.0,
+        "itt_tercile_0": 0.0,
+        "itt_tercile_1": 0.0,
+        "itt_tercile_2": null
+      },
+      "entity_swap_foil_end_injection": {
+        "itt_citation_migration_rate": 0.5,
+        "primary_metric": 0.5,
+        "target_cited_rate": 0.5,
+        "answer_flip_rate": 0.0,
+        "conditional_migration_rate": 0.5,
+        "conditional_migration_rate_intersection": null,
+        "citation_parse_rate": 1.0,
+        "delta_logp_target_id_mean": -0.11262027422587073,
+        "n_delta_none": 0,
+        "neighbor_next_excess": 0.0,
+        "neighbor_prev_excess": 0.0,
+        "alce_recall": 0.16666666666666666,
+        "alce_precision": 0.25,
+        "natural_location_rate": null,
+        "near_tie_concentration": 1.0,
+        "baseline_determinism_rate": null,
+        "n_items": 2,
+        "re_sourcing_share": 0.0,
+        "post_rationalization_share": 0.0,
+        "mixed_share": 0.0,
+        "undefined_share": 1.0,
+        "re_sourcing_share_single_source": 0.0,
+        "post_rationalization_share_single_source": 0.0,
+        "mixed_share_single_source": 0.0,
+        "undefined_share_single_source": 1.0,
+        "itt_single_source": 1.0,
+        "itt_redundant": 0.0,
+        "itt_early": 0.0,
+        "itt_late": 1.0,
+        "itt_tercile_0": 1.0,
+        "itt_tercile_1": 0.0,
+        "itt_tercile_2": null
+      },
+      "self_span_random_injection": {
+        "itt_citation_migration_rate": 0.5,
+        "primary_metric": 0.5,
+        "target_cited_rate": 0.5,
+        "answer_flip_rate": 0.0,
+        "conditional_migration_rate": 0.5,
+        "conditional_migration_rate_intersection": null,
+        "citation_parse_rate": 1.0,
+        "delta_logp_target_id_mean": -0.0016749699910481863,
+        "n_delta_none": 0,
+        "neighbor_next_excess": 0.0,
+        "neighbor_prev_excess": 0.0,
+        "alce_recall": 0.29166666666666663,
+        "alce_precision": 0.8333333333333334,
+        "natural_location_rate": 0.5,
+        "near_tie_concentration": 0.0,
+        "baseline_determinism_rate": null,
+        "n_items": 2,
+        "re_sourcing_share": 0.0,
+        "post_rationalization_share": 1.0,
+        "mixed_share": 0.0,
+        "undefined_share": 0.0,
+        "re_sourcing_share_single_source": null,
+        "post_rationalization_share_single_source": null,
+        "mixed_share_single_source": null,
+        "undefined_share_single_source": null,
+        "itt_single_source": 0.0,
+        "itt_redundant": 1.0,
+        "itt_early": 1.0,
+        "itt_late": 0.0,
+        "itt_tercile_0": 0.0,
+        "itt_tercile_1": 1.0,
+        "itt_tercile_2": null
+      },
+      "topical_foil_random_injection": {
+        "itt_citation_migration_rate": 0.0,
+        "primary_metric": 0.0,
+        "target_cited_rate": 0.5,
+        "answer_flip_rate": 0.5,
+        "conditional_migration_rate": 0.0,
+        "conditional_migration_rate_intersection": null,
+        "citation_parse_rate": 1.0,
+        "delta_logp_target_id_mean": -0.6070040067036947,
+        "n_delta_none": 0,
+        "neighbor_next_excess": 0.0,
+        "neighbor_prev_excess": 0.0,
+        "alce_recall": 0.07142857142857142,
+        "alce_precision": 0.16666666666666669,
+        "natural_location_rate": 0.0,
+        "near_tie_concentration": null,
+        "baseline_determinism_rate": null,
+        "n_items": 2,
+        "re_sourcing_share": null,
+        "post_rationalization_share": null,
+        "mixed_share": null,
+        "undefined_share": null,
+        "re_sourcing_share_single_source": null,
+        "post_rationalization_share_single_source": null,
+        "mixed_share_single_source": null,
+        "undefined_share_single_source": null,
+        "itt_single_source": 0.0,
+        "itt_redundant": 0.0,
+        "itt_early": 0.0,
+        "itt_late": 0.0,
+        "itt_tercile_0": 0.0,
+        "itt_tercile_1": 0.0,
+        "itt_tercile_2": null
+      },
+      "null_random_drop_trailing_whitespace_edit": {
+        "itt_citation_migration_rate": 0.0,
+        "primary_metric": 0.0,
+        "target_cited_rate": 0.0,
+        "answer_flip_rate": 0.0,
+        "conditional_migration_rate": 0.0,
+        "conditional_migration_rate_intersection": null,
+        "citation_parse_rate": 1.0,
+        "delta_logp_target_id_mean": 0.7158946990966797,
+        "n_delta_none": 0,
+        "neighbor_next_excess": null,
+        "neighbor_prev_excess": null,
+        "alce_recall": 0.08333333333333333,
+        "alce_precision": 0.16666666666666669,
+        "natural_location_rate": null,
+        "near_tie_concentration": null,
+        "baseline_determinism_rate": null,
+        "n_items": 2,
+        "re_sourcing_share": null,
+        "post_rationalization_share": null,
+        "mixed_share": null,
+        "undefined_share": null,
+        "re_sourcing_share_single_source": null,
+        "post_rationalization_share_single_source": null,
+        "mixed_share_single_source": null,
+        "undefined_share_single_source": null,
+        "itt_single_source": 0.0,
+        "itt_redundant": 0.0,
+        "itt_early": 0.0,
+        "itt_late": 0.0,
+        "itt_tercile_0": 0.0,
+        "itt_tercile_1": 0.0,
+        "itt_tercile_2": null
+      },
+      "positive_control_planted_evidence_relocated": {
+        "itt_citation_migration_rate": 0.0,
+        "primary_metric": 0.0,
+        "target_cited_rate": 0.0,
+        "answer_flip_rate": 0.5,
+        "conditional_migration_rate": 0.0,
+        "conditional_migration_rate_intersection": null,
+        "citation_parse_rate": 1.0,
+        "delta_logp_target_id_mean": 4.441310337007357,
+        "n_delta_none": 0,
+        "neighbor_next_excess": null,
+        "neighbor_prev_excess": null,
+        "alce_recall": 0.23809523809523808,
+        "alce_precision": 0.4166666666666667,
+        "natural_location_rate": null,
+        "near_tie_concentration": null,
+        "baseline_determinism_rate": null,
+        "n_items": 2,
+        "re_sourcing_share": null,
+        "post_rationalization_share": null,
+        "mixed_share": null,
+        "undefined_share": null,
+        "re_sourcing_share_single_source": null,
+        "post_rationalization_share_single_source": null,
+        "mixed_share_single_source": null,
+        "undefined_share_single_source": null,
+        "itt_single_source": 0.0,
+        "itt_redundant": 0.0,
+        "itt_early": 0.0,
+        "itt_late": 0.0,
+        "itt_tercile_0": 0.0,
+        "itt_tercile_1": 0.0,
+        "itt_tercile_2": null
+      }
+    },
+    "103": {
+      "baseline_unedited_alce_citation": {
+        "itt_citation_migration_rate": 0.0,
+        "primary_metric": 0.0,
+        "target_cited_rate": 0.0,
+        "answer_flip_rate": 0.0,
+        "conditional_migration_rate": 0.0,
+        "conditional_migration_rate_intersection": null,
+        "citation_parse_rate": 0.9606060606060606,
+        "delta_logp_target_id_mean": 0.0,
+        "n_delta_none": 0,
+        "neighbor_next_excess": null,
+        "neighbor_prev_excess": null,
+        "alce_recall": 0.08333333333333333,
+        "alce_precision": 0.16666666666666669,
+        "natural_location_rate": null,
+        "near_tie_concentration": null,
+        "baseline_determinism_rate": 1.0,
+        "n_items": 2,
+        "re_sourcing_share": null,
+        "post_rationalization_share": null,
+        "mixed_share": null,
+        "undefined_share": null,
+        "re_sourcing_share_single_source": null,
+        "post_rationalization_share_single_source": null,
+        "mixed_share_single_source": null,
+        "undefined_share_single_source": null,
+        "itt_single_source": 0.0,
+        "itt_redundant": 0.0,
+        "itt_early": 0.0,
+        "itt_late": 0.0,
+        "itt_tercile_0": 0.0,
+        "itt_tercile_1": 0.0,
+        "itt_tercile_2": null
+      },
+      "self_span_end_injection": {
+        "itt_citation_migration_rate": 0.5,
+        "primary_metric": 0.5,
+        "target_cited_rate": 0.5,
+        "answer_flip_rate": 0.0,
+        "conditional_migration_rate": 0.5,
+        "conditional_migration_rate_intersection": null,
+        "citation_parse_rate": 1.0,
+        "delta_logp_target_id_mean": 5.1625414093335475,
+        "n_delta_none": 0,
+        "neighbor_next_excess": 0.0,
+        "neighbor_prev_excess": 0.0,
+        "alce_recall": 0.0,
+        "alce_precision": 0.0,
+        "natural_location_rate": null,
+        "near_tie_concentration": 1.0,
+        "baseline_determinism_rate": null,
+        "n_items": 2,
+        "re_sourcing_share": 0.0,
+        "post_rationalization_share": 0.0,
+        "mixed_share": 1.0,
+        "undefined_share": 0.0,
+        "re_sourcing_share_single_source": 0.0,
+        "post_rationalization_share_single_source": 0.0,
+        "mixed_share_single_source": 1.0,
+        "undefined_share_single_source": 0.0,
+        "itt_single_source": 1.0,
+        "itt_redundant": 0.0,
+        "itt_early": 0.0,
+        "itt_late": 1.0,
+        "itt_tercile_0": 1.0,
+        "itt_tercile_1": 0.0,
+        "itt_tercile_2": null
+      },
+      "topical_foil_end_injection": {
+        "itt_citation_migration_rate": 0.0,
+        "primary_metric": 0.0,
+        "target_cited_rate": 0.0,
+        "answer_flip_rate": 0.5,
+        "conditional_migration_rate": 0.0,
+        "conditional_migration_rate_intersection": null,
+        "citation_parse_rate": 1.0,
+        "delta_logp_target_id_mean": -0.1243581771850586,
+        "n_delta_none": 0,
+        "neighbor_next_excess": 0.0,
+        "neighbor_prev_excess": 0.0,
+        "alce_recall": 0.0,
+        "alce_precision": 0.0,
+        "natural_location_rate": null,
+        "near_tie_concentration": null,
+        "baseline_determinism_rate": null,
+        "n_items": 2,
+        "re_sourcing_share": null,
+        "post_rationalization_share": null,
+        "mixed_share": null,
+        "undefined_share": null,
+        "re_sourcing_share_single_source": null,
+        "post_rationalization_share_single_source": null,
+        "mixed_share_single_source": null,
+        "undefined_share_single_source": null,
+        "itt_single_source": 0.0,
+        "itt_redundant": 0.0,
+        "itt_early": 0.0,
+        "itt_late": 0.0,
+        "itt_tercile_0": 0.0,
+        "itt_tercile_1": 0.0,
+        "itt_tercile_2": null
+      },
+      "entity_swap_foil_end_injection": {
+        "itt_citation_migration_rate": 0.5,
+        "primary_metric": 0.5,
+        "target_cited_rate": 0.5,
+        "answer_flip_rate": 0.0,
+        "conditional_migration_rate": 0.5,
+        "conditional_migration_rate_intersection": null,
+        "citation_parse_rate": 1.0,
+        "delta_logp_target_id_mean": 1.8324703772862752,
+        "n_delta_none": 0,
+        "neighbor_next_excess": 1.0,
+        "neighbor_prev_excess": 0.0,
+        "alce_recall": 0.1,
+        "alce_precision": 0.25,
+        "natural_location_rate": null,
+        "near_tie_concentration": 1.0,
+        "baseline_determinism_rate": null,
+        "n_items": 2,
+        "re_sourcing_share": 0.0,
+        "post_rationalization_share": 0.0,
+        "mixed_share": 0.0,
+        "undefined_share": 1.0,
+        "re_sourcing_share_single_source": 0.0,
+        "post_rationalization_share_single_source": 0.0,
+        "mixed_share_single_source": 0.0,
+        "undefined_share_single_source": 1.0,
+        "itt_single_source": 1.0,
+        "itt_redundant": 0.0,
+        "itt_early": 0.0,
+        "itt_late": 1.0,
+        "itt_tercile_0": 1.0,
+        "itt_tercile_1": 0.0,
+        "itt_tercile_2": null
+      },
+      "self_span_random_injection": {
+        "itt_citation_migration_rate": 0.0,
+        "primary_metric": 0.0,
+        "target_cited_rate": 0.0,
+        "answer_flip_rate": 0.0,
+        "conditional_migration_rate": 0.0,
+        "conditional_migration_rate_intersection": null,
+        "citation_parse_rate": 1.0,
+        "delta_logp_target_id_mean": 3.9377118945121765,
+        "n_delta_none": 0,
+        "neighbor_next_excess": 0.0,
+        "neighbor_prev_excess": 0.0,
+        "alce_recall": 0.16666666666666666,
+        "alce_precision": 0.5,
+        "natural_location_rate": 0.0,
+        "near_tie_concentration": null,
+        "baseline_determinism_rate": null,
+        "n_items": 2,
+        "re_sourcing_share": null,
+        "post_rationalization_share": null,
+        "mixed_share": null,
+        "undefined_share": null,
+        "re_sourcing_share_single_source": null,
+        "post_rationalization_share_single_source": null,
+        "mixed_share_single_source": null,
+        "undefined_share_single_source": null,
+        "itt_single_source": 0.0,
+        "itt_redundant": 0.0,
+        "itt_early": 0.0,
+        "itt_late": 0.0,
+        "itt_tercile_0": 0.0,
+        "itt_tercile_1": 0.0,
+        "itt_tercile_2": null
+      },
+      "topical_foil_random_injection": {
+        "itt_citation_migration_rate": 0.0,
+        "primary_metric": 0.0,
+        "target_cited_rate": 0.5,
+        "answer_flip_rate": 0.5,
+        "conditional_migration_rate": 0.0,
+        "conditional_migration_rate_intersection": null,
+        "citation_parse_rate": 1.0,
+        "delta_logp_target_id_mean": -0.1115560531616211,
+        "n_delta_none": 0,
+        "neighbor_next_excess": 0.0,
+        "neighbor_prev_excess": 0.0,
+        "alce_recall": 0.0,
+        "alce_precision": 0.0,
+        "natural_location_rate": 0.0,
+        "near_tie_concentration": null,
+        "baseline_determinism_rate": null,
+        "n_items": 2,
+        "re_sourcing_share": null,
+        "post_rationalization_share": null,
+        "mixed_share": null,
+        "undefined_share": null,
+        "re_sourcing_share_single_source": null,
+        "post_rationalization_share_single_source": null,
+        "mixed_share_single_source": null,
+        "undefined_share_single_source": null,
+        "itt_single_source": 0.0,
+        "itt_redundant": 0.0,
+        "itt_early": 0.0,
+        "itt_late": 0.0,
+        "itt_tercile_0": 0.0,
+        "itt_tercile_1": 0.0,
+        "itt_tercile_2": null
+      },
+      "null_random_drop_trailing_whitespace_edit": {
+        "itt_citation_migration_rate": 0.0,
+        "primary_metric": 0.0,
+        "target_cited_rate": 0.0,
+        "answer_flip_rate": 0.0,
+        "conditional_migration_rate": 0.0,
+        "conditional_migration_rate_intersection": null,
+        "citation_parse_rate": 1.0,
+        "delta_logp_target_id_mean": 0.6008186340332031,
+        "n_delta_none": 0,
+        "neighbor_next_excess": null,
+        "neighbor_prev_excess": null,
+        "alce_recall": 0.08333333333333333,
+        "alce_precision": 0.16666666666666669,
+        "natural_location_rate": null,
+        "near_tie_concentration": null,
+        "baseline_determinism_rate": null,
+        "n_items": 2,
+        "re_sourcing_share": null,
+        "post_rationalization_share": null,
+        "mixed_share": null,
+        "undefined_share": null,
+        "re_sourcing_share_single_source": null,
+        "post_rationalization_share_single_source": null,
+        "mixed_share_single_source": null,
+        "undefined_share_single_source": null,
+        "itt_single_source": 0.0,
+        "itt_redundant": 0.0,
+        "itt_early": 0.0,
+        "itt_late": 0.0,
+        "itt_tercile_0": 0.0,
+        "itt_tercile_1": 0.0,
+        "itt_tercile_2": null
+      },
+      "positive_control_planted_evidence_relocated": {
+        "itt_citation_migration_rate": 0.0,
+        "primary_metric": 0.0,
+        "target_cited_rate": 0.0,
+        "answer_flip_rate": 0.5,
+        "conditional_migration_rate": 0.0,
+        "conditional_migration_rate_intersection": null,
+        "citation_parse_rate": 1.0,
+        "delta_logp_target_id_mean": 5.630702083309492,
+        "n_delta_none": 0,
+        "neighbor_next_excess": null,
+        "neighbor_prev_excess": null,
+        "alce_recall": 0.0,
+        "alce_precision": 0.0,
+        "natural_location_rate": null,
+        "near_tie_concentration": null,
+        "baseline_determinism_rate": null,
+        "n_items": 2,
+        "re_sourcing_share": null,
+        "post_rationalization_share": null,
+        "mixed_share": null,
+        "undefined_share": null,
+        "re_sourcing_share_single_source": null,
+        "post_rationalization_share_single_source": null,
+        "mixed_share_single_source": null,
+        "undefined_share_single_source": null,
+        "itt_single_source": 0.0,
+        "itt_redundant": 0.0,
+        "itt_early": 0.0,
+        "itt_late": 0.0,
+        "itt_tercile_0": 0.0,
+        "itt_tercile_1": 0.0,
+        "itt_tercile_2": null
+      }
+    }
+  },
+  "seeds": [
+    101,
+    102,
+    103
+  ],
+  "resumed_seeds": [],
+  "metrics": {},
+  "elapsed_sec": 35334.45,
+  "time_budget_sec": 86400,
+  "nan_count": 0,
+  "results_complete": true,
+  "primary_metric_key": "itt_citation_migration_rate",
+  "direction": "minimize",
+  "primary_condition": "topical_foil_end_injection",
+  "baseline_condition": "self_span_end_injection",
+  "aggregate_seed_set": "every record in harness.seed_records(); used for aggregates, primary_metric, baseline_metric and the printed per-seed and mean lines (same basis as the harness PRIMARY line)",
+  "headline_seed_set": "seeds passing seed_validity (arms present, parse rate, determinism, defined null ITT, positive control not broken) with item rows; used for aggregates_headline_seeds, *_headline_seeds metrics, control_checks_headline_descriptive, contrasts and the novelty precondition. The null ITT never excludes a seed",
+  "null_control_basis": "run-level: mean null ITT and mean positive-control target_cited rate over every recorded seed, excluded seeds included (controls, control_checks, control_checks_all_seeds and controls_for_verdicts all hold this block); decides broken_null and broken_positive for the verdicts and scientific_validity.controls_ok. Headline seeds already passed the per-seed validity gates, so they cannot reveal a broken control",
+  "recorded_seeds": [
+    "101",
+    "102",
+    "103"
+  ],
+  "headline_seeds": [],
+  "excluded_seeds": [
+    {
+      "seed": "101",
+      "reasons": [
+        "seed_validity failed"
+      ],
+      "validity": {
+        "valid": false,
+        "success": false,
+        "reasons": [
+          "positive_target_cited=0.0"
+        ],
+        "flags": []
+      }
+    },
+    {
+      "seed": "102",
+      "reasons": [
+        "seed_validity failed"
+      ],
+      "validity": {
+        "valid": false,
+        "success": false,
+        "reasons": [
+          "positive_target_cited=0.0"
+        ],
+        "flags": []
+      }
+    },
+    {
+      "seed": "103",
+      "reasons": [
+        "seed_validity failed"
+      ],
+      "validity": {
+        "valid": false,
+        "success": false,
+        "reasons": [
+          "positive_target_cited=0.0"
+        ],
+        "flags": []
+      }
+    }
+  ],
+  "primary_metric": 0.0,
+  "primary_metric_std": 0.0,
+  "baseline_metric": 0.5,
+  "baseline_metric_std": 0.0,
+  "aggregates": {
+    "baseline_unedited_alce_citation": {
+      "alce_precision": {
+        "mean": 0.16666666666666666,
+        "std": 3.3993498887762956e-17,
+        "n": 3
+      },
+      "alce_recall": {
+        "mean": 0.08333333333333333,
+        "std": 0.0,
+        "n": 3
+      },
+      "answer_flip_rate": {
+        "mean": 0.0,
+        "std": 0.0,
+        "n": 3
+      },
+      "baseline_determinism_rate": {
+        "mean": 1.0,
+        "std": 0.0,
+        "n": 3
+      },
+      "citation_parse_rate": {
+        "mean": 0.9606060606060606,
+        "std": 0.0,
+        "n": 3
+      },
+      "conditional_migration_rate": {
+        "mean": 0.0,
+        "std": 0.0,
+        "n": 3
+      },
+      "conditional_migration_rate_intersection": {
+        "mean": null,
+        "std": null,
+        "n": 0
+      },
+      "delta_logp_target_id_mean": {
+        "mean": 0.0,
+        "std": 0.0,
+        "n": 3
+      },
+      "itt_citation_migration_rate": {
+        "mean": 0.0,
+        "std": 0.0,
+        "n": 3
+      },
+      "itt_early": {
+        "mean": 0.0,
+        "std": 0.0,
+        "n": 3
+      },
+      "itt_late": {
+        "mean": 0.0,
+        "std": 0.0,
+        "n": 3
+      },
+      "itt_redundant": {
+        "mean": 0.0,
+        "std": 0.0,
+        "n": 3
+      },
+      "itt_single_source": {
+        "mean": 0.0,
+        "std": 0.0,
+        "n": 3
+      },
+      "itt_tercile_0": {
+        "mean": 0.0,
+        "std": 0.0,
+        "n": 3
+      },
+      "itt_tercile_1": {
+        "mean": 0.0,
+        "std": 0.0,
+        "n": 3
+      },
+      "itt_tercile_2": {
+        "mean": null,
+        "std": null,
+        "n": 0
+      },
+      "mixed_share": {
+        "mean": null,
+        "std": null,
+        "n": 0
+      },
+      "mixed_share_single_source": {
+        "mean": null,
+        "std": null,
+        "n": 0
+      },
+      "n_delta_none": {
+        "mean": 0.0,
+        "std": 0.0,
+        "n": 3
+      },
+      "n_items": {
+        "mean": 2.0,
+        "std": 0.0,
+        "n": 3
+      },
+      "natural_location_rate": {
+        "mean": null,
+        "std": null,
+        "n": 0
+      },
+      "near_tie_concentration": {
+        "mean": null,
+        "std": null,
+        "n": 0
+      },
+      "neighbor_next_excess": {
+        "mean": null,
+        "std": null,
+        "n": 0
+      },
+      "neighbor_prev_excess": {
+        "mean": null,
+        "std": null,
+        "n": 0
+      },
+      "post_rationalization_share": {
+        "mean": null,
+        "std": null,
+        "n": 0
+      },
+      "post_rationalization_share_single_source": {
+        "mean": null,
+        "std": null,
+        "n": 0
+      },
+      "primary_metric": {
+        "mean": 0.0,
+        "std": 0.0,
+        "n": 3
+      },
+      "re_sourcing_share": {
+        "mean": null,
+        "std": null,
+        "n": 0
+      },
+      "re_sourcing_share_single_source": {
+        "mean": null,
+        "std": null,
+        "n": 0
+      },
+      "target_cited_rate": {
+        "mean": 0.0,
+        "std": 0.0,
+        "n": 3
+      },
+      "undefined_share": {
+        "mean": null,
+        "std": null,
+        "n": 0
+      },
+      "undefined_share_single_source": {
+        "mean": null,
+        "std": null,
+        "n": 0
+      }
+    },
+    "entity_swap_foil_end_injection": {
+      "alce_precision": {
+        "mean": 0.16666666666666666,
+        "std": 0.14433756729740646,
+        "n": 3
+      },
+      "alce_recall": {
+        "mean": 0.08888888888888889,
+        "std": 0.08388704928078611,
+        "n": 3
+      },
+      "answer_flip_rate": {
+        "mean": 0.16666666666666666,
+        "std": 0.2886751345948129,
+        "n": 3
+      },
+      "baseline_determinism_rate": {
+        "mean": null,
+        "std": null,
+        "n": 0
+      },
+      "citation_parse_rate": {
+        "mean": 1.0,
+        "std": 0.0,
+        "n": 3
+      },
+      "conditional_migration_rate": {
+        "mean": 0.6666666666666666,
+        "std": 0.28867513459481287,
+        "n": 3
+      },
+      "conditional_migration_rate_intersection": {
+        "mean": null,
+        "std": null,
+        "n": 0
+      },
+      "delta_logp_target_id_mean": {
+        "mean": 1.091672115855747,
+        "std": 1.0521238121630507,
+        "n": 3
+      },
+      "itt_citation_migration_rate": {
+        "mean": 0.5,
+        "std": 0.0,
+        "n": 3
+      },
+      "itt_early": {
+        "mean": 0.3333333333333333,
+        "std": 0.5773502691896258,
+        "n": 3
+      },
+      "itt_late": {
+        "mean": 0.6666666666666666,
+        "std": 0.5773502691896258,
+        "n": 3
+      },
+      "itt_redundant": {
+        "mean": 0.3333333333333333,
+        "std": 0.5773502691896258,
+        "n": 3
+      },
+      "itt_single_source": {
+        "mean": 0.6666666666666666,
+        "std": 0.5773502691896258,
+        "n": 3
+      },
+      "itt_tercile_0": {
+        "mean": 0.6666666666666666,
+        "std": 0.5773502691896258,
+        "n": 3
+      },
+      "itt_tercile_1": {
+        "mean": 0.3333333333333333,
+        "std": 0.5773502691896258,
+        "n": 3
+      },
+      "itt_tercile_2": {
+        "mean": null,
+        "std": null,
+        "n": 0
+      },
+      "mixed_share": {
+        "mean": 0.0,
+        "std": 0.0,
+        "n": 3
+      },
+      "mixed_share_single_source": {
+        "mean": 0.0,
+        "std": 0.0,
+        "n": 2
+      },
+      "n_delta_none": {
+        "mean": 0.0,
+        "std": 0.0,
+        "n": 3
+      },
+      "n_items": {
+        "mean": 2.0,
+        "std": 0.0,
+        "n": 3
+      },
+      "natural_location_rate": {
+        "mean": null,
+        "std": null,
+        "n": 0
+      },
+      "near_tie_concentration": {
+        "mean": 0.6666666666666666,
+        "std": 0.5773502691896258,
+        "n": 3
+      },
+      "neighbor_next_excess": {
+        "mean": 0.3333333333333333,
+        "std": 0.5773502691896258,
+        "n": 3
+      },
+      "neighbor_prev_excess": {
+        "mean": 0.0,
+        "std": 0.0,
+        "n": 3
+      },
+      "post_rationalization_share": {
+        "mean": 0.0,
+        "std": 0.0,
+        "n": 3
+      },
+      "post_rationalization_share_single_source": {
+        "mean": 0.0,
+        "std": 0.0,
+        "n": 2
+      },
+      "primary_metric": {
+        "mean": 0.5,
+        "std": 0.0,
+        "n": 3
+      },
+      "re_sourcing_share": {
+        "mean": 0.0,
+        "std": 0.0,
+        "n": 3
+      },
+      "re_sourcing_share_single_source": {
+        "mean": 0.0,
+        "std": 0.0,
+        "n": 2
+      },
+      "target_cited_rate": {
+        "mean": 0.6666666666666666,
+        "std": 0.28867513459481287,
+        "n": 3
+      },
+      "undefined_share": {
+        "mean": 1.0,
+        "std": 0.0,
+        "n": 3
+      },
+      "undefined_share_single_source": {
+        "mean": 1.0,
+        "std": 0.0,
+        "n": 2
+      }
+    },
+    "null_random_drop_trailing_whitespace_edit": {
+      "alce_precision": {
+        "mean": 0.16666666666666666,
+        "std": 3.3993498887762956e-17,
+        "n": 3
+      },
+      "alce_recall": {
+        "mean": 0.08333333333333333,
+        "std": 0.0,
+        "n": 3
+      },
+      "answer_flip_rate": {
+        "mean": 0.0,
+        "std": 0.0,
+        "n": 3
+      },
+      "baseline_determinism_rate": {
+        "mean": null,
+        "std": null,
+        "n": 0
+      },
+      "citation_parse_rate": {
+        "mean": 1.0,
+        "std": 0.0,
+        "n": 3
+      },
+      "conditional_migration_rate": {
+        "mean": 0.0,
+        "std": 0.0,
+        "n": 3
+      },
+      "conditional_migration_rate_intersection": {
+        "mean": null,
+        "std": null,
+        "n": 0
+      },
+      "delta_logp_target_id_mean": {
+        "mean": 0.6391773223876953,
+        "std": 0.06643919714168109,
+        "n": 3
+      },
+      "itt_citation_migration_rate": {
+        "mean": 0.0,
+        "std": 0.0,
+        "n": 3
+      },
+      "itt_early": {
+        "mean": 0.0,
+        "std": 0.0,
+        "n": 3
+      },
+      "itt_late": {
+        "mean": 0.0,
+        "std": 0.0,
+        "n": 3
+      },
+      "itt_redundant": {
+        "mean": 0.0,
+        "std": 0.0,
+        "n": 3
+      },
+      "itt_single_source": {
+        "mean": 0.0,
+        "std": 0.0,
+        "n": 3
+      },
+      "itt_tercile_0": {
+        "mean": 0.0,
+        "std": 0.0,
+        "n": 3
+      },
+      "itt_tercile_1": {
+        "mean": 0.0,
+        "std": 0.0,
+        "n": 3
+      },
+      "itt_tercile_2": {
+        "mean": null,
+        "std": null,
+        "n": 0
+      },
+      "mixed_share": {
+        "mean": null,
+        "std": null,
+        "n": 0
+      },
+      "mixed_share_single_source": {
+        "mean": null,
+        "std": null,
+        "n": 0
+      },
+      "n_delta_none": {
+        "mean": 0.0,
+        "std": 0.0,
+        "n": 3
+      },
+      "n_items": {
+        "mean": 2.0,
+        "std": 0.0,
+        "n": 3
+      },
+      "natural_location_rate": {
+        "mean": null,
+        "std": null,
+        "n": 0
+      },
+      "near_tie_concentration": {
+        "mean": null,
+        "std": null,
+        "n": 0
+      },
+      "neighbor_next_excess": {
+        "mean": null,
+        "std": null,
+        "n": 0
+      },
+      "neighbor_prev_excess": {
+        "mean": null,
+        "std": null,
+        "n": 0
+      },
+      "post_rationalization_share": {
+        "mean": null,
+        "std": null,
+        "n": 0
+      },
+      "post_rationalization_share_single_source": {
+        "mean": null,
+        "std": null,
+        "n": 0
+      },
+      "primary_metric": {
+        "mean": 0.0,
+        "std": 0.0,
+        "n": 3
+      },
+      "re_sourcing_share": {
+        "mean": null,
+        "std": null,
+        "n": 0
+      },
+      "re_sourcing_share_single_source": {
+        "mean": null,
+        "std": null,
+        "n": 0
+      },
+      "target_cited_rate": {
+        "mean": 0.0,
+        "std": 0.0,
+        "n": 3
+      },
+      "undefined_share": {
+        "mean": null,
+        "std": null,
+        "n": 0
+      },
+      "undefined_share_single_source": {
+        "mean": null,
+        "std": null,
+        "n": 0
+      }
+    },
+    "positive_control_planted_evidence_relocated": {
+      "alce_precision": {
+        "mean": 0.1388888888888889,
+        "std": 0.2405626121623441,
+        "n": 3
+      },
+      "alce_recall": {
+        "mean": 0.07936507936507936,
+        "std": 0.13746434980705374,
+        "n": 3
+      },
+      "answer_flip_rate": {
+        "mean": 0.6666666666666666,
+        "std": 0.28867513459481287,
+        "n": 3
+      },
+      "baseline_determinism_rate": {
+        "mean": null,
+        "std": null,
+        "n": 0
+      },
+      "citation_parse_rate": {
+        "mean": 1.0,
+        "std": 0.0,
+        "n": 3
+      },
+      "conditional_migration_rate": {
+        "mean": 0.0,
+        "std": 0.0,
+        "n": 2
+      },
+      "conditional_migration_rate_intersection": {
+        "mean": null,
+        "std": null,
+        "n": 0
+      },
+      "delta_logp_target_id_mean": {
+        "mean": 4.948345984293459,
+        "std": 0.6137720481897176,
+        "n": 3
+      },
+      "itt_citation_migration_rate": {
+        "mean": 0.0,
+        "std": 0.0,
+        "n": 3
+      },
+      "itt_early": {
+        "mean": 0.0,
+        "std": 0.0,
+        "n": 3
+      },
+      "itt_late": {
+        "mean": 0.0,
+        "std": 0.0,
+        "n": 3
+      },
+      "itt_redundant": {
+        "mean": 0.0,
+        "std": 0.0,
+        "n": 3
+      },
+      "itt_single_source": {
+        "mean": 0.0,
+        "std": 0.0,
+        "n": 3
+      },
+      "itt_tercile_0": {
+        "mean": 0.0,
+        "std": 0.0,
+        "n": 3
+      },
+      "itt_tercile_1": {
+        "mean": 0.0,
+        "std": 0.0,
+        "n": 3
+      },
+      "itt_tercile_2": {
+        "mean": null,
+        "std": null,
+        "n": 0
+      },
+      "mixed_share": {
+        "mean": null,
+        "std": null,
+        "n": 0
+      },
+      "mixed_share_single_source": {
+        "mean": null,
+        "std": null,
+        "n": 0
+      },
+      "n_delta_none": {
+        "mean": 0.0,
+        "std": 0.0,
+        "n": 3
+      },
+      "n_items": {
+        "mean": 2.0,
+        "std": 0.0,
+        "n": 3
+      },
+      "natural_location_rate": {
+        "mean": null,
+        "std": null,
+        "n": 0
+      },
+      "near_tie_concentration": {
+        "mean": null,
+        "std": null,
+        "n": 0
+      },
+      "neighbor_next_excess": {
+        "mean": null,
+        "std": null,
+        "n": 0
+      },
+      "neighbor_prev_excess": {
+        "mean": null,
+        "std": null,
+        "n": 0
+      },
+      "post_rationalization_share": {
+        "mean": null,
+        "std": null,
+        "n": 0
+      },
+      "post_rationalization_share_single_source": {
+        "mean": null,
+        "std": null,
+        "n": 0
+      },
+      "primary_metric": {
+        "mean": 0.0,
+        "std": 0.0,
+        "n": 3
+      },
+      "re_sourcing_share": {
+        "mean": null,
+        "std": null,
+        "n": 0
+      },
+      "re_sourcing_share_single_source": {
+        "mean": null,
+        "std": null,
+        "n": 0
+      },
+      "target_cited_rate": {
+        "mean": 0.0,
+        "std": 0.0,
+        "n": 3
+      },
+      "undefined_share": {
+        "mean": null,
+        "std": null,
+        "n": 0
+      },
+      "undefined_share_single_source": {
+        "mean": null,
+        "std": null,
+        "n": 0
+      }
+    },
+    "self_span_end_injection": {
+      "alce_precision": {
+        "mean": 0.05555555555555556,
+        "std": 0.09622504486493764,
+        "n": 3
+      },
+      "alce_recall": {
+        "mean": 0.03333333333333333,
+        "std": 0.05773502691896259,
+        "n": 3
+      },
+      "answer_flip_rate": {
+        "mean": 0.0,
+        "std": 0.0,
+        "n": 3
+      },
+      "baseline_determinism_rate": {
+        "mean": null,
+        "std": null,
+        "n": 0
+      },
+      "citation_parse_rate": {
+        "mean": 1.0,
+        "std": 0.0,
+        "n": 3
+      },
+      "conditional_migration_rate": {
+        "mean": 0.5,
+        "std": 0.0,
+        "n": 3
+      },
+      "conditional_migration_rate_intersection": {
+        "mean": null,
+        "std": null,
+        "n": 0
+      },
+      "delta_logp_target_id_mean": {
+        "mean": 4.8032947116427955,
+        "std": 0.6222335328517193,
+        "n": 3
+      },
+      "itt_citation_migration_rate": {
+        "mean": 0.5,
+        "std": 0.0,
+        "n": 3
+      },
+      "itt_early": {
+        "mean": 0.0,
+        "std": 0.0,
+        "n": 3
+      },
+      "itt_late": {
+        "mean": 1.0,
+        "std": 0.0,
+        "n": 3
+      },
+      "itt_redundant": {
+        "mean": 0.0,
+        "std": 0.0,
+        "n": 3
+      },
+      "itt_single_source": {
+        "mean": 1.0,
+        "std": 0.0,
+        "n": 3
+      },
+      "itt_tercile_0": {
+        "mean": 1.0,
+        "std": 0.0,
+        "n": 3
+      },
+      "itt_tercile_1": {
+        "mean": 0.0,
+        "std": 0.0,
+        "n": 3
+      },
+      "itt_tercile_2": {
+        "mean": null,
+        "std": null,
+        "n": 0
+      },
+      "mixed_share": {
+        "mean": 1.0,
+        "std": 0.0,
+        "n": 3
+      },
+      "mixed_share_single_source": {
+        "mean": 1.0,
+        "std": 0.0,
+        "n": 3
+      },
+      "n_delta_none": {
+        "mean": 0.0,
+        "std": 0.0,
+        "n": 3
+      },
+      "n_items": {
+        "mean": 2.0,
+        "std": 0.0,
+        "n": 3
+      },
+      "natural_location_rate": {
+        "mean": null,
+        "std": null,
+        "n": 0
+      },
+      "near_tie_concentration": {
+        "mean": 1.0,
+        "std": 0.0,
+        "n": 3
+      },
+      "neighbor_next_excess": {
+        "mean": 0.0,
+        "std": 0.0,
+        "n": 3
+      },
+      "neighbor_prev_excess": {
+        "mean": 0.0,
+        "std": 0.0,
+        "n": 3
+      },
+      "post_rationalization_share": {
+        "mean": 0.0,
+        "std": 0.0,
+        "n": 3
+      },
+      "post_rationalization_share_single_source": {
+        "mean": 0.0,
+        "std": 0.0,
+        "n": 3
+      },
+      "primary_metric": {
+        "mean": 0.5,
+        "std": 0.0,
+        "n": 3
+      },
+      "re_sourcing_share": {
+        "mean": 0.0,
+        "std": 0.0,
+        "n": 3
+      },
+      "re_sourcing_share_single_source": {
+        "mean": 0.0,
+        "std": 0.0,
+        "n": 3
+      },
+      "target_cited_rate": {
+        "mean": 0.5,
+        "std": 0.0,
+        "n": 3
+      },
+      "undefined_share": {
+        "mean": 0.0,
+        "std": 0.0,
+        "n": 3
+      },
+      "undefined_share_single_source": {
+        "mean": 0.0,
+        "std": 0.0,
+        "n": 3
+      }
+    },
+    "self_span_random_injection": {
+      "alce_precision": {
+        "mean": 0.6944444444444445,
+        "std": 0.17347216662217774,
+        "n": 3
+      },
+      "alce_recall": {
+        "mean": 0.24166666666666667,
+        "std": 0.06614378277661476,
+        "n": 3
+      },
+      "answer_flip_rate": {
+        "mean": 0.0,
+        "std": 0.0,
+        "n": 3
+      },
+      "baseline_determinism_rate": {
+        "mean": null,
+        "std": null,
+        "n": 0
+      },
+      "citation_parse_rate": {
+        "mean": 1.0,
+        "std": 0.0,
+        "n": 3
+      },
+      "conditional_migration_rate": {
+        "mean": 0.3333333333333333,
+        "std": 0.2886751345948129,
+        "n": 3
+      },
+      "conditional_migration_rate_intersection": {
+        "mean": null,
+        "std": null,
+        "n": 0
+      },
+      "delta_logp_target_id_mean": {
+        "mean": 1.9406557149357269,
+        "std": 1.970263529804738,
+        "n": 3
+      },
+      "itt_citation_migration_rate": {
+        "mean": 0.3333333333333333,
+        "std": 0.2886751345948129,
+        "n": 3
+      },
+      "itt_early": {
+        "mean": 0.6666666666666666,
+        "std": 0.5773502691896258,
+        "n": 3
+      },
+      "itt_late": {
+        "mean": 0.0,
+        "std": 0.0,
+        "n": 3
+      },
+      "itt_redundant": {
+        "mean": 0.6666666666666666,
+        "std": 0.5773502691896258,
+        "n": 3
+      },
+      "itt_single_source": {
+        "mean": 0.0,
+        "std": 0.0,
+        "n": 3
+      },
+      "itt_tercile_0": {
+        "mean": 0.0,
+        "std": 0.0,
+        "n": 3
+      },
+      "itt_tercile_1": {
+        "mean": 0.6666666666666666,
+        "std": 0.5773502691896258,
+        "n": 3
+      },
+      "itt_tercile_2": {
+        "mean": null,
+        "std": null,
+        "n": 0
+      },
+      "mixed_share": {
+        "mean": 0.0,
+        "std": 0.0,
+        "n": 2
+      },
+      "mixed_share_single_source": {
+        "mean": null,
+        "std": null,
+        "n": 0
+      },
+      "n_delta_none": {
+        "mean": 0.0,
+        "std": 0.0,
+        "n": 3
+      },
+      "n_items": {
+        "mean": 2.0,
+        "std": 0.0,
+        "n": 3
+      },
+      "natural_location_rate": {
+        "mean": 0.3333333333333333,
+        "std": 0.2886751345948129,
+        "n": 3
+      },
+      "near_tie_concentration": {
+        "mean": 0.0,
+        "std": 0.0,
+        "n": 2
+      },
+      "neighbor_next_excess": {
+        "mean": 0.0,
+        "std": 0.0,
+        "n": 3
+      },
+      "neighbor_prev_excess": {
+        "mean": 0.0,
+        "std": 0.0,
+        "n": 3
+      },
+      "post_rationalization_share": {
+        "mean": 1.0,
+        "std": 0.0,
+        "n": 2
+      },
+      "post_rationalization_share_single_source": {
+        "mean": null,
+        "std": null,
+        "n": 0
+      },
+      "primary_metric": {
+        "mean": 0.3333333333333333,
+        "std": 0.2886751345948129,
+        "n": 3
+      },
+      "re_sourcing_share": {
+        "mean": 0.0,
+        "std": 0.0,
+        "n": 2
+      },
+      "re_sourcing_share_single_source": {
+        "mean": null,
+        "std": null,
+        "n": 0
+      },
+      "target_cited_rate": {
+        "mean": 0.3333333333333333,
+        "std": 0.2886751345948129,
+        "n": 3
+      },
+      "undefined_share": {
+        "mean": 0.0,
+        "std": 0.0,
+        "n": 2
+      },
+      "undefined_share_single_source": {
+        "mean": null,
+        "std": null,
+        "n": 0
+      }
+    },
+    "topical_foil_end_injection": {
+      "alce_precision": {
+        "mean": 0.05555555555555556,
+        "std": 0.09622504486493764,
+        "n": 3
+      },
+      "alce_recall": {
+        "mean": 0.027777777777777776,
+        "std": 0.048112522432468816,
+        "n": 3
+      },
+      "answer_flip_rate": {
+        "mean": 0.5,
+        "std": 0.0,
+        "n": 3
+      },
+      "baseline_determinism_rate": {
+        "mean": null,
+        "std": null,
+        "n": 0
+      },
+      "citation_parse_rate": {
+        "mean": 1.0,
+        "std": 0.0,
+        "n": 3
+      },
+      "conditional_migration_rate": {
+        "mean": 0.0,
+        "std": 0.0,
+        "n": 3
+      },
+      "conditional_migration_rate_intersection": {
+        "mean": null,
+        "std": null,
+        "n": 0
+      },
+      "delta_logp_target_id_mean": {
+        "mean": -0.14648408359951445,
+        "std": 0.03832319407335164,
+        "n": 3
+      },
+      "itt_citation_migration_rate": {
+        "mean": 0.0,
+        "std": 0.0,
+        "n": 3
+      },
+      "itt_early": {
+        "mean": 0.0,
+        "std": 0.0,
+        "n": 3
+      },
+      "itt_late": {
+        "mean": 0.0,
+        "std": 0.0,
+        "n": 3
+      },
+      "itt_redundant": {
+        "mean": 0.0,
+        "std": 0.0,
+        "n": 3
+      },
+      "itt_single_source": {
+        "mean": 0.0,
+        "std": 0.0,
+        "n": 3
+      },
+      "itt_tercile_0": {
+        "mean": 0.0,
+        "std": 0.0,
+        "n": 3
+      },
+      "itt_tercile_1": {
+        "mean": 0.0,
+        "std": 0.0,
+        "n": 3
+      },
+      "itt_tercile_2": {
+        "mean": null,
+        "std": null,
+        "n": 0
+      },
+      "mixed_share": {
+        "mean": null,
+        "std": null,
+        "n": 0
+      },
+      "mixed_share_single_source": {
+        "mean": null,
+        "std": null,
+        "n": 0
+      },
+      "n_delta_none": {
+        "mean": 0.0,
+        "std": 0.0,
+        "n": 3
+      },
+      "n_items": {
+        "mean": 2.0,
+        "std": 0.0,
+        "n": 3
+      },
+      "natural_location_rate": {
+        "mean": null,
+        "std": null,
+        "n": 0
+      },
+      "near_tie_concentration": {
+        "mean": null,
+        "std": null,
+        "n": 0
+      },
+      "neighbor_next_excess": {
+        "mean": 0.0,
+        "std": 0.0,
+        "n": 3
+      },
+      "neighbor_prev_excess": {
+        "mean": 0.0,
+        "std": 0.0,
+        "n": 3
+      },
+      "post_rationalization_share": {
+        "mean": null,
+        "std": null,
+        "n": 0
+      },
+      "post_rationalization_share_single_source": {
+        "mean": null,
+        "std": null,
+        "n": 0
+      },
+      "primary_metric": {
+        "mean": 0.0,
+        "std": 0.0,
+        "n": 3
+      },
+      "re_sourcing_share": {
+        "mean": null,
+        "std": null,
+        "n": 0
+      },
+      "re_sourcing_share_single_source": {
+        "mean": null,
+        "std": null,
+        "n": 0
+      },
+      "target_cited_rate": {
+        "mean": 0.0,
+        "std": 0.0,
+        "n": 3
+      },
+      "undefined_share": {
+        "mean": null,
+        "std": null,
+        "n": 0
+      },
+      "undefined_share_single_source": {
+        "mean": null,
+        "std": null,
+        "n": 0
+      }
+    },
+    "topical_foil_random_injection": {
+      "alce_precision": {
+        "mean": 0.05555555555555556,
+        "std": 0.09622504486493764,
+        "n": 3
+      },
+      "alce_recall": {
+        "mean": 0.023809523809523808,
+        "std": 0.041239304942116126,
+        "n": 3
+      },
+      "answer_flip_rate": {
+        "mean": 0.6666666666666666,
+        "std": 0.28867513459481287,
+        "n": 3
+      },
+      "baseline_determinism_rate": {
+        "mean": null,
+        "std": null,
+        "n": 0
+      },
+      "citation_parse_rate": {
+        "mean": 1.0,
+        "std": 0.0,
+        "n": 3
+      },
+      "conditional_migration_rate": {
+        "mean": 0.0,
+        "std": 0.0,
+        "n": 2
+      },
+      "conditional_migration_rate_intersection": {
+        "mean": null,
+        "std": null,
+        "n": 0
+      },
+      "delta_logp_target_id_mean": {
+        "mean": -0.3448489507039388,
+        "std": 0.248981800158915,
+        "n": 3
+      },
+      "itt_citation_migration_rate": {
+        "mean": 0.0,
+        "std": 0.0,
+        "n": 3
+      },
+      "itt_early": {
+        "mean": 0.0,
+        "std": 0.0,
+        "n": 3
+      },
+      "itt_late": {
+        "mean": 0.0,
+        "std": 0.0,
+        "n": 3
+      },
+      "itt_redundant": {
+        "mean": 0.0,
+        "std": 0.0,
+        "n": 3
+      },
+      "itt_single_source": {
+        "mean": 0.0,
+        "std": 0.0,
+        "n": 3
+      },
+      "itt_tercile_0": {
+        "mean": 0.0,
+        "std": 0.0,
+        "n": 3
+      },
+      "itt_tercile_1": {
+        "mean": 0.0,
+        "std": 0.0,
+        "n": 3
+      },
+      "itt_tercile_2": {
+        "mean": null,
+        "std": null,
+        "n": 0
+      },
+      "mixed_share": {
+        "mean": null,
+        "std": null,
+        "n": 0
+      },
+      "mixed_share_single_source": {
+        "mean": null,
+        "std": null,
+        "n": 0
+      },
+      "n_delta_none": {
+        "mean": 0.0,
+        "std": 0.0,
+        "n": 3
+      },
+      "n_items": {
+        "mean": 2.0,
+        "std": 0.0,
+        "n": 3
+      },
+      "natural_location_rate": {
+        "mean": 0.0,
+        "std": 0.0,
+        "n": 3
+      },
+      "near_tie_concentration": {
+        "mean": null,
+        "std": null,
+        "n": 0
+      },
+      "neighbor_next_excess": {
+        "mean": 0.0,
+        "std": 0.0,
+        "n": 3
+      },
+      "neighbor_prev_excess": {
+        "mean": 0.0,
+        "std": 0.0,
+        "n": 3
+      },
+      "post_rationalization_share": {
+        "mean": null,
+        "std": null,
+        "n": 0
+      },
+      "post_rationalization_share_single_source": {
+        "mean": null,
+        "std": null,
+        "n": 0
+      },
+      "primary_metric": {
+        "mean": 0.0,
+        "std": 0.0,
+        "n": 3
+      },
+      "re_sourcing_share": {
+        "mean": null,
+        "std": null,
+        "n": 0
+      },
+      "re_sourcing_share_single_source": {
+        "mean": null,
+        "std": null,
+        "n": 0
+      },
+      "target_cited_rate": {
+        "mean": 0.3333333333333333,
+        "std": 0.2886751345948129,
+        "n": 3
+      },
+      "undefined_share": {
+        "mean": null,
+        "std": null,
+        "n": 0
+      },
+      "undefined_share_single_source": {
+        "mean": null,
+        "std": null,
+        "n": 0
+      }
+    }
+  },
+  "primary_metric_headline_seeds": null,
+  "primary_metric_std_headline_seeds": null,
+  "baseline_metric_headline_seeds": null,
+  "baseline_metric_std_headline_seeds": null,
+  "aggregates_headline_seeds": {},
+  "seed_validity": {
+    "101": {
+      "valid": false,
+      "success": false,
+      "reasons": [
+        "positive_target_cited=0.0"
+      ],
+      "flags": []
+    },
+    "102": {
+      "valid": false,
+      "success": false,
+      "reasons": [
+        "positive_target_cited=0.0"
+      ],
+      "flags": []
+    },
+    "103": {
+      "valid": false,
+      "success": false,
+      "reasons": [
+        "positive_target_cited=0.0"
+      ],
+      "flags": []
+    }
+  },
+  "success_rate": 0.0,
+  "control_checks": {
+    "per_seed": {
+      "101": {
+        "null_itt": 0.0,
+        "positive_target_cited": 0.0,
+        "null_expected_met": true,
+        "null_broken": false,
+        "positive_expected_met": false,
+        "positive_broken": true
+      },
+      "102": {
+        "null_itt": 0.0,
+        "positive_target_cited": 0.0,
+        "null_expected_met": true,
+        "null_broken": false,
+        "positive_expected_met": false,
+        "positive_broken": true
+      },
+      "103": {
+        "null_itt": 0.0,
+        "positive_target_cited": 0.0,
+        "null_expected_met": true,
+        "null_broken": false,
+        "positive_expected_met": false,
+        "positive_broken": true
+      }
+    },
+    "null_itt": 0.0,
+    "positive_target_cited": 0.0,
+    "null_expected_met": true,
+    "null_broken": false,
+    "positive_expected_met": false,
+    "positive_broken": true,
+    "broken_null": false,
+    "broken_positive": true,
+    "thresholds": {
+      "null_expected_max": 0.03,
+      "null_broken_above": 0.05,
+      "pos_expected_min": 0.5,
+      "pos_broken_below": 0.3
+    },
+    "pooling": "mean over every recorded seed, including excluded seeds (run-level: mean null ITT and mean positive-control target_cited rate over every recorded seed, excluded seeds included (controls, control_checks, control_checks_all_seeds and controls_for_verdicts all hold this block); decides broken_null and broken_positive for the verdicts and scientific_validity.controls_ok. Headline seeds already passed the per-seed validity gates, so they cannot reveal a broken control)"
+  },
+  "controls": {
+    "per_seed": {
+      "101": {
+        "null_itt": 0.0,
+        "positive_target_cited": 0.0,
+        "null_expected_met": true,
+        "null_broken": false,
+        "positive_expected_met": false,
+        "positive_broken": true
+      },
+      "102": {
+        "null_itt": 0.0,
+        "positive_target_cited": 0.0,
+        "null_expected_met": true,
+        "null_broken": false,
+        "positive_expected_met": false,
+        "positive_broken": true
+      },
+      "103": {
+        "null_itt": 0.0,
+        "positive_target_cited": 0.0,
+        "null_expected_met": true,
+        "null_broken": false,
+        "positive_expected_met": false,
+        "positive_broken": true
+      }
+    },
+    "null_itt": 0.0,
+    "positive_target_cited": 0.0,
+    "null_expected_met": true,
+    "null_broken": false,
+    "positive_expected_met": false,
+    "positive_broken": true,
+    "broken_null": false,
+    "broken_positive": true,
+    "thresholds": {
+      "null_expected_max": 0.03,
+      "null_broken_above": 0.05,
+      "pos_expected_min": 0.5,
+      "pos_broken_below": 0.3
+    },
+    "pooling": "mean over every recorded seed, including excluded seeds (run-level: mean null ITT and mean positive-control target_cited rate over every recorded seed, excluded seeds included (controls, control_checks, control_checks_all_seeds and controls_for_verdicts all hold this block); decides broken_null and broken_positive for the verdicts and scientific_validity.controls_ok. Headline seeds already passed the per-seed validity gates, so they cannot reveal a broken control)"
+  },
+  "control_checks_all_seeds": {
+    "per_seed": {
+      "101": {
+        "null_itt": 0.0,
+        "positive_target_cited": 0.0,
+        "null_expected_met": true,
+        "null_broken": false,
+        "positive_expected_met": false,
+        "positive_broken": true
+      },
+      "102": {
+        "null_itt": 0.0,
+        "positive_target_cited": 0.0,
+        "null_expected_met": true,
+        "null_broken": false,
+        "positive_expected_met": false,
+        "positive_broken": true
+      },
+      "103": {
+        "null_itt": 0.0,
+        "positive_target_cited": 0.0,
+        "null_expected_met": true,
+        "null_broken": false,
+        "positive_expected_met": false,
+        "positive_broken": true
+      }
+    },
+    "null_itt": 0.0,
+    "positive_target_cited": 0.0,
+    "null_expected_met": true,
+    "null_broken": false,
+    "positive_expected_met": false,
+    "positive_broken": true,
+    "broken_null": false,
+    "broken_positive": true,
+    "thresholds": {
+      "null_expected_max": 0.03,
+      "null_broken_above": 0.05,
+      "pos_expected_min": 0.5,
+      "pos_broken_below": 0.3
+    },
+    "pooling": "mean over every recorded seed, including excluded seeds (run-level: mean null ITT and mean positive-control target_cited rate over every recorded seed, excluded seeds included (controls, control_checks, control_checks_all_seeds and controls_for_verdicts all hold this block); decides broken_null and broken_positive for the verdicts and scientific_validity.controls_ok. Headline seeds already passed the per-seed validity gates, so they cannot reveal a broken control)"
+  },
+  "controls_for_verdicts": {
+    "per_seed": {
+      "101": {
+        "null_itt": 0.0,
+        "positive_target_cited": 0.0,
+        "null_expected_met": true,
+        "null_broken": false,
+        "positive_expected_met": false,
+        "positive_broken": true
+      },
+      "102": {
+        "null_itt": 0.0,
+        "positive_target_cited": 0.0,
+        "null_expected_met": true,
+        "null_broken": false,
+        "positive_expected_met": false,
+        "positive_broken": true
+      },
+      "103": {
+        "null_itt": 0.0,
+        "positive_target_cited": 0.0,
+        "null_expected_met": true,
+        "null_broken": false,
+        "positive_expected_met": false,
+        "positive_broken": true
+      }
+    },
+    "null_itt": 0.0,
+    "positive_target_cited": 0.0,
+    "null_expected_met": true,
+    "null_broken": false,
+    "positive_expected_met": false,
+    "positive_broken": true,
+    "broken_null": false,
+    "broken_positive": true,
+    "thresholds": {
+      "null_expected_max": 0.03,
+      "null_broken_above": 0.05,
+      "pos_expected_min": 0.5,
+      "pos_broken_below": 0.3
+    },
+    "pooling": "mean over every recorded seed, including excluded seeds (run-level: mean null ITT and mean positive-control target_cited rate over every recorded seed, excluded seeds included (controls, control_checks, control_checks_all_seeds and controls_for_verdicts all hold this block); decides broken_null and broken_positive for the verdicts and scientific_validity.controls_ok. Headline seeds already passed the per-seed validity gates, so they cannot reveal a broken control)"
+  },
+  "control_checks_headline_descriptive": {
+    "per_seed": {},
+    "null_itt": null,
+    "positive_target_cited": null,
+    "null_expected_met": null,
+    "positive_expected_met": null,
+    "thresholds": {
+      "null_expected_max": 0.03,
+      "null_broken_above": 0.05,
+      "pos_expected_min": 0.5,
+      "pos_broken_below": 0.3
+    },
+    "pooling": "mean over headline seeds, descriptive only (seeds passing seed_validity (arms present, parse rate, determinism, defined null ITT, positive control not broken) with item rows; used for aggregates_headline_seeds, *_headline_seeds metrics, control_checks_headline_descriptive, contrasts and the novelty precondition. The null ITT never excludes a seed)",
+    "null_broken_headline_descriptive": false,
+    "positive_broken_headline_descriptive": false,
+    "decides_verdicts": false
+  },
+  "control_arm_mapping": {
+    "null": "null_random_drop_trailing_whitespace_edit",
+    "positive_control": "positive_control_planted_evidence_relocated",
+    "treatment": "topical_foil_end_injection",
+    "published_probe": "self_span_end_injection",
+    "paired_reference": "baseline_unedited_alce_citation"
+  },
+  "contrasts": null,
+  "contrasts_basis": "all_recorded_seeds_descriptive",
+  "contrasts_descriptive_all_recorded_seeds": {
+    "P1a": {
+      "b": 0,
+      "c": 0,
+      "n": 6,
+      "p": 1.0,
+      "p_row_mcnemar": 1.0,
+      "rd": 0.0,
+      "odds_ratio": null,
+      "n_items": 2,
+      "n_repeated_items": 2,
+      "b_items": 0,
+      "c_items": 0,
+      "n_items_tied": 2,
+      "p_item_sign_test": 1.0,
+      "sensitivity_test": "item_sign_test",
+      "p_inference": 1.0,
+      "inference_test": "mcnemar_exact",
+      "test": "Inference (Holm and verdicts, plan item 41): exact two-sided McNemar test on the discordant pairs, arms paired by (seed, sample_id). b = pairs where x moves and y does not, c = the reverse; p_inference = p = p_row_mcnemar = min(1, 2 * BinomCDF(min(b, c); b + c, 0.5)); zero discordant pairs give p = 1.0. rd = (b - c) / n; odds_ratio = b / c (None when c = 0). The test uses only discordant pairs and is underpowered when few pairs are discordant. Caveat: a sample_id repeated across seeds gives correlated pairs that McNemar treats as independent. Sensitivity (not used for verdicts): exact two-sided sign test on sample_id clusters (p_item_sign_test). Each sample_id is collapsed to its mean move difference over seeds, ties are dropped, one df per item.",
+      "x": "topical_foil_end_injection",
+      "y": "null_random_drop_trailing_whitespace_edit",
+      "rd_ci95": [
+        0.0,
+        0.0
+      ],
+      "rd_ci90": [
+        0.0,
+        0.0
+      ],
+      "ratio_topical_over_self": 0.0,
+      "ratio_ci95": [
+        0.0,
+        0.0
+      ],
+      "p_holm": 1.0,
+      "p_holm_item_sign_test": 1.0,
+      "sig_under_item_sign_test": false
+    },
+    "foil_share_ratio": {
+      "point": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ]
+    },
+    "P1b": {
+      "b": 3,
+      "c": 0,
+      "n": 6,
+      "p": 0.25,
+      "p_row_mcnemar": 0.25,
+      "rd": 0.5,
+      "odds_ratio": null,
+      "n_items": 2,
+      "n_repeated_items": 2,
+      "b_items": 1,
+      "c_items": 0,
+      "n_items_tied": 1,
+      "p_item_sign_test": 1.0,
+      "sensitivity_test": "item_sign_test",
+      "p_inference": 0.25,
+      "inference_test": "mcnemar_exact",
+      "test": "Inference (Holm and verdicts, plan item 41): exact two-sided McNemar test on the discordant pairs, arms paired by (seed, sample_id). b = pairs where x moves and y does not, c = the reverse; p_inference = p = p_row_mcnemar = min(1, 2 * BinomCDF(min(b, c); b + c, 0.5)); zero discordant pairs give p = 1.0. rd = (b - c) / n; odds_ratio = b / c (None when c = 0). The test uses only discordant pairs and is underpowered when few pairs are discordant. Caveat: a sample_id repeated across seeds gives correlated pairs that McNemar treats as independent. Sensitivity (not used for verdicts): exact two-sided sign test on sample_id clusters (p_item_sign_test). Each sample_id is collapsed to its mean move difference over seeds, ties are dropped, one df per item.",
+      "x": "self_span_end_injection",
+      "y": "topical_foil_end_injection",
+      "rd_ci95": [
+        0.0,
+        1.0
+      ],
+      "rd_ci90": [
+        0.0,
+        1.0
+      ],
+      "mcnemar_direction": "self_gt_topical",
+      "tost_equivalent": false,
+      "p_holm": 1.0,
+      "p_holm_item_sign_test": 1.0,
+      "sig_under_item_sign_test": false
+    },
+    "P1c": {
+      "b": 3,
+      "c": 0,
+      "n": 6,
+      "p": 0.25,
+      "p_row_mcnemar": 0.25,
+      "rd": 0.5,
+      "odds_ratio": null,
+      "n_items": 2,
+      "n_repeated_items": 2,
+      "b_items": 2,
+      "c_items": 0,
+      "n_items_tied": 0,
+      "p_item_sign_test": 0.5,
+      "sensitivity_test": "item_sign_test",
+      "p_inference": 0.25,
+      "inference_test": "mcnemar_exact",
+      "test": "Inference (Holm and verdicts, plan item 41): exact two-sided McNemar test on the discordant pairs, arms paired by (seed, sample_id). b = pairs where x moves and y does not, c = the reverse; p_inference = p = p_row_mcnemar = min(1, 2 * BinomCDF(min(b, c); b + c, 0.5)); zero discordant pairs give p = 1.0. rd = (b - c) / n; odds_ratio = b / c (None when c = 0). The test uses only discordant pairs and is underpowered when few pairs are discordant. Caveat: a sample_id repeated across seeds gives correlated pairs that McNemar treats as independent. Sensitivity (not used for verdicts): exact two-sided sign test on sample_id clusters (p_item_sign_test). Each sample_id is collapsed to its mean move difference over seeds, ties are dropped, one df per item.",
+      "x": "entity_swap_foil_end_injection",
+      "y": "topical_foil_end_injection",
+      "rd_ci95": [
+        0.3333333333333333,
+        0.6666666666666666
+      ],
+      "rd_ci90": [
+        0.3333333333333333,
+        0.6666666666666666
+      ]
+    },
+    "P1d": {
+      "flip_rates": {
+        "self_span_end_injection": 0.0,
+        "topical_foil_end_injection": 0.5,
+        "entity_swap_foil_end_injection": 0.16666666666666666,
+        "self_span_random_injection": 0.0,
+        "topical_foil_random_injection": 0.6666666666666666
+      },
+      "topical_foil_end_injection": {
+        "flip_gap": -0.5,
+        "itt_gap": 0.5,
+        "conditional_gap": 0.5,
+        "gap_difference": 0.0
+      },
+      "entity_swap_foil_end_injection": {
+        "flip_gap": -0.16666666666666666,
+        "itt_gap": 0.0,
+        "conditional_gap": -0.09999999999999998,
+        "gap_difference": -0.09999999999999998
+      }
+    },
+    "P2a_self": {
+      "b": 3,
+      "c": 2,
+      "n": 6,
+      "p": 1.0,
+      "p_row_mcnemar": 1.0,
+      "rd": 0.16666666666666666,
+      "odds_ratio": 1.5,
+      "n_items": 2,
+      "n_repeated_items": 2,
+      "b_items": 1,
+      "c_items": 1,
+      "n_items_tied": 0,
+      "p_item_sign_test": 1.0,
+      "sensitivity_test": "item_sign_test",
+      "p_inference": 1.0,
+      "inference_test": "mcnemar_exact",
+      "test": "Inference (Holm and verdicts, plan item 41): exact two-sided McNemar test on the discordant pairs, arms paired by (seed, sample_id). b = pairs where x moves and y does not, c = the reverse; p_inference = p = p_row_mcnemar = min(1, 2 * BinomCDF(min(b, c); b + c, 0.5)); zero discordant pairs give p = 1.0. rd = (b - c) / n; odds_ratio = b / c (None when c = 0). The test uses only discordant pairs and is underpowered when few pairs are discordant. Caveat: a sample_id repeated across seeds gives correlated pairs that McNemar treats as independent. Sensitivity (not used for verdicts): exact two-sided sign test on sample_id clusters (p_item_sign_test). Each sample_id is collapsed to its mean move difference over seeds, ties are dropped, one df per item.",
+      "x": "self_span_end_injection",
+      "y": "self_span_random_injection",
+      "rd_ci95": [
+        -0.6666666666666666,
+        1.0
+      ],
+      "rd_ci90": [
+        -0.6666666666666666,
+        1.0
+      ],
+      "tost_equivalent": false,
+      "p_holm": 1.0,
+      "p_holm_item_sign_test": 1.0,
+      "sig_under_item_sign_test": false
+    },
+    "P2a_topical": {
+      "b": 0,
+      "c": 0,
+      "n": 6,
+      "p": 1.0,
+      "p_row_mcnemar": 1.0,
+      "rd": 0.0,
+      "odds_ratio": null,
+      "n_items": 2,
+      "n_repeated_items": 2,
+      "b_items": 0,
+      "c_items": 0,
+      "n_items_tied": 2,
+      "p_item_sign_test": 1.0,
+      "sensitivity_test": "item_sign_test",
+      "p_inference": 1.0,
+      "inference_test": "mcnemar_exact",
+      "test": "Inference (Holm and verdicts, plan item 41): exact two-sided McNemar test on the discordant pairs, arms paired by (seed, sample_id). b = pairs where x moves and y does not, c = the reverse; p_inference = p = p_row_mcnemar = min(1, 2 * BinomCDF(min(b, c); b + c, 0.5)); zero discordant pairs give p = 1.0. rd = (b - c) / n; odds_ratio = b / c (None when c = 0). The test uses only discordant pairs and is underpowered when few pairs are discordant. Caveat: a sample_id repeated across seeds gives correlated pairs that McNemar treats as independent. Sensitivity (not used for verdicts): exact two-sided sign test on sample_id clusters (p_item_sign_test). Each sample_id is collapsed to its mean move difference over seeds, ties are dropped, one df per item.",
+      "x": "topical_foil_end_injection",
+      "y": "topical_foil_random_injection",
+      "rd_ci95": [
+        0.0,
+        0.0
+      ],
+      "rd_ci90": [
+        0.0,
+        0.0
+      ],
+      "tost_equivalent": true,
+      "p_holm": 1.0,
+      "p_holm_item_sign_test": 1.0,
+      "sig_under_item_sign_test": false
+    },
+    "P2c": {
+      "self_span_end_injection": {
+        "next": 0.0,
+        "prev": 0.0
+      },
+      "self_span_random_injection": {
+        "next": 0.0,
+        "prev": 0.0
+      },
+      "topical_foil_end_injection": {
+        "next": 0.0,
+        "prev": 0.0
+      },
+      "topical_foil_random_injection": {
+        "next": 0.0,
+        "prev": 0.0
+      }
+    },
+    "P2e": {
+      "weights": [
+        0.16666666666666666,
+        0.3333333333333333,
+        0.16666666666666666,
+        0.16666666666666666,
+        0.16666666666666666
+      ],
+      "self": {
+        "natural": 0.375,
+        "end": 0.5,
+        "uniform_random": 0.3333333333333333
+      },
+      "topical": {
+        "natural": 0.0,
+        "end": 0.0,
+        "uniform_random": 0.0
+      }
+    },
+    "holm": {
+      "P1a": 1.0,
+      "P1b": 1.0,
+      "P2a_self": 1.0,
+      "P2a_topical": 1.0
+    },
+    "holm_input": "p_inference (mcnemar_exact, paired by (seed, sample_id); plan item 41)",
+    "holm_sensitivity_item_sign_test": {
+      "P1a": 1.0,
+      "P1b": 1.0,
+      "P2a_self": 1.0,
+      "P2a_topical": 1.0
+    },
+    "inference_caveat": {
+      "n_repeated_items": {
+        "P1a": 2,
+        "P1b": 2,
+        "P2a_self": 2,
+        "P2a_topical": 2
+      },
+      "any_repeated_items": true,
+      "significance_differs_under_item_sign_test": [],
+      "note": "repeated sample_ids across seeds give correlated McNemar pairs; the clustered sign test is the sensitivity check"
+    },
+    "paired_test": "Inference (Holm and verdicts, plan item 41): exact two-sided McNemar test on the discordant pairs, arms paired by (seed, sample_id). b = pairs where x moves and y does not, c = the reverse; p_inference = p = p_row_mcnemar = min(1, 2 * BinomCDF(min(b, c); b + c, 0.5)); zero discordant pairs give p = 1.0. rd = (b - c) / n; odds_ratio = b / c (None when c = 0). The test uses only discordant pairs and is underpowered when few pairs are discordant. Caveat: a sample_id repeated across seeds gives correlated pairs that McNemar treats as independent. Sensitivity (not used for verdicts): exact two-sided sign test on sample_id clusters (p_item_sign_test). Each sample_id is collapsed to its mean move difference over seeds, ties are dropped, one df per item.",
+    "redundancy_gap": {
+      "point": 1.0,
+      "ci95": null,
+      "n_single": 3,
+      "n_redundant": 3
+    },
+    "F3": {
+      "self_shares": {
+        "re_sourcing_share": 0.0,
+        "post_rationalization_share": 0.0,
+        "mixed_share": 1.0,
+        "undefined_share": 0.0
+      },
+      "self_shares_single_source": {
+        "re_sourcing_share": 0.0,
+        "post_rationalization_share": 0.0,
+        "mixed_share": 1.0,
+        "undefined_share": 0.0
+      },
+      "post_rationalization_ci95": [
+        0.0,
+        0.0
+      ],
+      "prediction_supported": true,
+      "prediction_rejected": false
+    },
+    "F4": {
+      "near_tie_concentration_self": 0.6666666666666666,
+      "tercile0_null_over_self": 0.0,
+      "deviance_drop": {
+        "slot_drop": 0.0,
+        "span_drop": 8.54061225661557,
+        "slot_gt_span": false,
+        "deviance": {
+          "full": 15.22294350295159,
+          "no_slot": 15.22294350295159,
+          "no_span": 23.76355575956716
+        },
+        "formulas": {
+          "full": "move ~ span*position + C(slot) + redundancy + C(tercile)",
+          "no_slot": "move ~ span*position + redundancy + C(tercile)",
+          "no_span": "move ~ position + C(slot) + redundancy + C(tercile)"
+        },
+        "aliased_columns_dropped": {
+          "full": [
+            "redundancy[T.single_source]"
+          ],
+          "no_slot": [],
+          "no_span": [
+            "redundancy[T.single_source]"
+          ]
+        },
+        "method": "binomial GLM (logit link), IRLS in numpy; aliased columns dropped and recorded",
+        "converged": true,
+        "n_iter": {
+          "full": 23,
+          "no_slot": 23,
+          "no_span": 5
+        },
+        "note": "fixed-effects GLM approximation"
+      },
+      "sign_agreement": {
+        "agreement_fraction": 0.7605,
+        "n_undefined": 0,
+        "B": 2000
+      },
+      "glmm": {
+        "n": 24,
+        "formula": "move ~ span*position + C(slot) + redundancy + C(tercile)",
+        "method": "binomial GLMM (logit link), random intercepts for item and seed, penalized IRLS in numpy; random-effect SDs chosen on the fixed grid (0.1, 0.3, 0.7, 1.5, 3.0) by Laplace-approximate marginal likelihood",
+        "fixed_effects": {
+          "Intercept": {
+            "mean": 0.36361126781242814,
+            "sd": 2.5777629425256743
+          },
+          "span[T.topical]": {
+            "mean": -24.283478459005753,
+            "sd": 72375.05802643432
+          },
+          "position[T.random]": {
+            "mean": -0.7371860874284542,
+            "sd": 1.2308904422137477
+          },
+          "span[T.topical]:position[T.random]": {
+            "mean": 0.7371860874284739,
+            "sd": 102353.78863840595
+          },
+          "C(slot)[T.4]": {
+            "mean": -1.849618385555844e-15,
+            "sd": 2.8904691641723046
+          },
+          "C(slot)[T.5]": {
+            "mean": 0.004981775901799604,
+            "sd": 2.0438658885898886
+          },
+          "C(tercile)[T.1]": {
+            "mean": 0.0049817759017996375,
+            "sd": 2.0389673294443282
+          },
+          "C(tercile)[T.2]": {
+            "mean": -1.1276913587408013,
+            "sd": 2.7660214684168114
+          }
+        },
+        "aliased_columns_dropped": [
+          "redundancy[T.single_source]"
+        ],
+        "random_effect_sd": {
+          "item": 0.1,
+          "seed": 0.1
+        },
+        "laplace_loglik": -7.635426399977055,
+        "sd_grid": [
+          {
+            "sd": {
+              "item": 0.1,
+              "seed": 0.1
+            },
+            "laplace_loglik": -7.635426399977055,
+            "converged": true
+          },
+          {
+            "sd": {
+              "item": 0.1,
+              "seed": 0.3
+            },
+            "laplace_loglik": -7.717784306671857,
+            "converged": true
+          },
+          {
+            "sd": {
+              "item": 0.1,
+              "seed": 0.7
+            },
+            "laplace_loglik": -8.059431354611633,
+            "converged": true
+          },
+          {
+            "sd": {
+              "item": 0.1,
+              "seed": 1.5
+            },
+            "laplace_loglik": -8.930880119287163,
+            "converged": true
+          },
+          {
+            "sd": {
+              "item": 0.1,
+              "seed": 3.0
+            },
+            "laplace_loglik": -10.254974257893938,
+            "converged": true
+          },
+          {
+            "sd": {
+              "item": 0.3,
+              "seed": 0.1
+            },
+            "laplace_loglik": -7.734994946413473,
+            "converged": true
+          },
+          {
+            "sd": {
+              "item": 0.3,
+              "seed": 0.3
+            },
+            "laplace_loglik": -7.814223511003324,
+            "converged": true
+          },
+          {
+            "sd": {
+              "item": 0.3,
+              "seed": 0.7
+            },
+            "laplace_loglik": -8.144538532380002,
+            "converged": true
+          },
+          {
+            "sd": {
+              "item": 0.3,
+              "seed": 1.5
+            },
+            "laplace_loglik": -8.996288045141954,
+            "converged": true
+          },
+          {
+            "sd": {
+              "item": 0.3,
+              "seed": 3.0
+            },
+            "laplace_loglik": -10.305135982063632,
+            "converged": true
+          },
+          {
+            "sd": {
+              "item": 0.7,
+              "seed": 0.1
+            },
+            "laplace_loglik": -8.122456152145574,
+            "converged": true
+          },
+          {
+            "sd": {
+              "item": 0.7,
+              "seed": 0.3
+            },
+            "laplace_loglik": -8.191976712411364,
+            "converged": true
+          },
+          {
+            "sd": {
+              "item": 0.7,
+              "seed": 0.7
+            },
+            "laplace_loglik": -8.484973483772855,
+            "converged": true
+          },
+          {
+            "sd": {
+              "item": 0.7,
+              "seed": 1.5
+            },
+            "laplace_loglik": -9.263355829815424,
+            "converged": true
+          },
+          {
+            "sd": {
+              "item": 0.7,
+              "seed": 3.0
+            },
+            "laplace_loglik": -10.51006295971185,
+            "converged": true
+          },
+          {
+            "sd": {
+              "item": 1.5,
+              "seed": 0.1
+            },
+            "laplace_loglik": -9.002596548109775,
+            "converged": true
+          },
+          {
+            "sd": {
+              "item": 1.5,
+              "seed": 0.3
+            },
+            "laplace_loglik": -9.059858741480449,
+            "converged": true
+          },
+          {
+            "sd": {
+              "item": 1.5,
+              "seed": 0.7
+            },
+            "laplace_loglik": -9.300307149814854,
+            "converged": true
+          },
+          {
+            "sd": {
+              "item": 1.5,
+              "seed": 1.5
+            },
+            "laplace_loglik": -9.943676972126237,
+            "converged": true
+          },
+          {
+            "sd": {
+              "item": 1.5,
+              "seed": 3.0
+            },
+            "laplace_loglik": -11.036323435183371,
+            "converged": true
+          },
+          {
+            "sd": {
+              "item": 3.0,
+              "seed": 0.1
+            },
+            "laplace_loglik": -10.179249678956943,
+            "converged": true
+          },
+          {
+            "sd": {
+              "item": 3.0,
+              "seed": 0.3
+            },
+            "laplace_loglik": -10.230387804342197,
+            "converged": true
+          },
+          {
+            "sd": {
+              "item": 3.0,
+              "seed": 0.7
+            },
+            "laplace_loglik": -10.441878900868344,
+            "converged": true
+          },
+          {
+            "sd": {
+              "item": 3.0,
+              "seed": 1.5
+            },
+            "laplace_loglik": -10.985205839936748,
+            "converged": true
+          },
+          {
+            "sd": {
+              "item": 3.0,
+              "seed": 3.0
+            },
+            "laplace_loglik": -11.891323968996414,
+            "converged": true
+          }
+        ],
+        "converged": true,
+        "n_iter": 23,
+        "interaction_term": "span[T.topical]:position[T.random]",
+        "interaction": {
+          "mean": 0.7371860874284739,
+          "sd": 102353.78863840595
+        }
+      }
+    },
+    "delta_logp_rank_biserial": 1.0,
+    "seed_wilcoxon": {
+      "p": 0.25,
+      "n_seeds": 3,
+      "test": "two-sided Wilcoxon signed-rank on per-seed ITT, zero differences dropped, average ranks; exact enumeration of all sign flips for n <= 16, tie-corrected normal approximation above; descriptive only (n = 5 seeds gives a minimum p of 0.0625)",
+      "note": "descriptive only"
+    }
+  },
+  "contrasts_preserved_row_sources": [],
+  "item_rows_restored_from_process": [
+    "101",
+    "102",
+    "103"
+  ],
+  "contrasts_by_pool": {},
+  "verdicts": [
+    {
+      "label": "broken_positive",
+      "evidence": {
+        "positive_target_cited": 0.0
+      }
+    }
+  ],
+  "novelty_precondition": {
+    "published_probe_condition": "self_span_end_injection",
+    "null_condition": "null_random_drop_trailing_whitespace_edit",
+    "self_itt_mean": null,
+    "null_itt_mean": null,
+    "seed_set": "headline seeds",
+    "rule": "self-span ITT minus null ITT >= effect_threshold",
+    "published_probe_moves_citations": null
+  },
+  "flags": [
+    "protocol_deviation:positive_control_donor_population",
+    "protocol_deviation:positive_control_donor_population",
+    "protocol_deviation:in_context_demonstrations_unavailable",
+    "seed_shortfall:seed=101:missing=48",
+    "seed_shortfall:seed=102:missing=48",
+    "seed_shortfall:seed=103:missing=48",
+    "item_rows_restored_from_process:seed=101",
+    "item_rows_restored_from_process:seed=102",
+    "item_rows_restored_from_process:seed=103",
+    "seed_excluded_from_headline:101:seed_validity failed",
+    "seed_excluded_from_headline:102:seed_validity failed",
+    "seed_excluded_from_headline:103:seed_validity failed",
+    "positive_control_broken:seed=101",
+    "positive_control_broken:seed=102",
+    "positive_control_broken:seed=103",
+    "positive_control_broken_run_level",
+    "positive_control_below_expected_0.50",
+    "primary_metric_includes_seeds_excluded_from_headline",
+    "contrasts_computed_on_seeds_excluded_from_headline",
+    "no_valid_seed"
+  ],
+  "smoke_overrides": [],
+  "eligibility_outcomes": {
+    "counts": {
+      "c1_uncovered": 234,
+      "c3_parse": 1079,
+      "c4_self_span": 806,
+      "c5_target": 44,
+      "c6_foil": 142,
+      "c7_swap": 2,
+      "eligible": 7
+    },
+    "samples": {
+      "c3_parse": [
+        {
+          "sample_id": "1459956625476131080",
+          "answer_chars": null,
+          "answer_tail": null
+        },
+        {
+          "sample_id": "-6301438413612247126",
+          "answer_chars": null,
+          "answer_tail": null
+        },
+        {
+          "sample_id": "7642895723874836754",
+          "answer_chars": null,
+          "answer_tail": null
+        }
+      ],
+      "c4_self_span": [
+        {
+          "sample_id": "1459956625476131080",
+          "answer_chars": 284,
+          "answer_tail": "name was Becky. This information can be directly inferred from Document [3], which states, \"Jesse proposes to Becky and they soon become married.\" Therefore, the answer to the question \"What was Jesse's wife's name on Full House?\" is Becky."
+        },
+        {
+          "sample_id": "-6301438413612247126",
+          "answer_chars": 459,
+          "answer_tail": "asses the infraspinatus muscles of beef and is sometimes referred to as a \"top blade\" roast in some butcher shops and meat markets. The anatomical structure of the flat iron cut includes the dorsal part of the rotator cuff of the steer [1]."
+        },
+        {
+          "sample_id": "7642895723874836754",
+          "answer_chars": 382,
+          "answer_tail": "[1] Despite this declaration, towards the end of the novel, Glinda praises his brain as not quite that of the Scarecrow's. [1] Therefore, based on the information provided in Document [1], the Tin Woodman had no heart in \"The Wizard of Oz.\""
+        }
+      ],
+      "c5_target": [
+        {
+          "sample_id": "4067447584006303072",
+          "answer_chars": 1316,
+          "answer_tail": "r the Buffalo Braves, posting a 34.5 scoring average and leading the league in field goals made. \n\nLastly, Document [5] provides insight into LeBron James, who was named the Best Player in Modern NBA History by ESPN. In February 2012-13, he"
+        },
+        {
+          "sample_id": "-3840313627795945784",
+          "answer_chars": 882,
+          "answer_tail": ") program in 2002-2003 [2]. The Worker, Homeownership, and Business Assistance Act of 2009 was another legislative effort to extend unemployment benefits, as seen in the provisions of the Unemployment Compensation Extension Act of 2009 [4]."
+        },
+        {
+          "sample_id": "8633752250485892737",
+          "answer_chars": 655,
+          "answer_tail": " in groceries and convenience stores after 9:00 p.m., while the sale of liquor remains banned (Document [1]). Municipalities can also opt to prohibit the issuance of liquor licenses, effectively making the municipality \"dry\" (Document [2])."
+        }
+      ],
+      "c1_uncovered": [
+        {
+          "sample_id": "7797208395147217894",
+          "answer_chars": null,
+          "answer_tail": null
+        },
+        {
+          "sample_id": "-4465070934230250382",
+          "answer_chars": null,
+          "answer_tail": null
+        },
+        {
+          "sample_id": "6926831701429902934",
+          "answer_chars": null,
+          "answer_tail": null
+        }
+      ],
+      "c6_foil": [
+        {
+          "sample_id": "-855559032276100466",
+          "answer_chars": 465,
+          "answer_tail": "cument [2] states, \"On October 28 they defeated the Mamluk forces once more in the Battle of Yaunis Khan and they annexed the region of Palestine. By December of that year the entire region of Palestine was conquered by the Ottoman Empire.\""
+        },
+        {
+          "sample_id": "5037246049190270444",
+          "answer_chars": 465,
+          "answer_tail": "m are Prince William, Duke of Cambridge, and their children Prince George, Princess Charlotte, and Prince Louis. Therefore, the immediate successor to Queen Elizabeth II would be Prince Charles if no changes occur in the line of succession."
+        },
+        {
+          "sample_id": "2706809538993853922",
+          "answer_chars": 623,
+          "answer_tail": "r had been sending threatening letters to her, indicating that this person was also involved in the attempts to kill her (Document [1]). Therefore, both the stalker and the person who sent the threatening letters were trying to kill Rachel."
+        }
+      ],
+      "eligible": [
+        {
+          "sample_id": "988271751607485679",
+          "answer_chars": 445,
+          "answer_tail": " über-novel,\" indicating that the series is intended to be a comprehensive work rather than a standalone collection of eight separate novels. Therefore, the answer to the question \"How many books are in Stephen King's Dark Tower?\" is eight."
+        },
+        {
+          "sample_id": "988271751607485679",
+          "answer_chars": 445,
+          "answer_tail": " über-novel,\" indicating that the series is intended to be a comprehensive work rather than a standalone collection of eight separate novels. Therefore, the answer to the question \"How many books are in Stephen King's Dark Tower?\" is eight."
+        },
+        {
+          "sample_id": "2721445551141766411",
+          "answer_chars": 880,
+          "answer_tail": "ne & Co. predates General Electric's inclusion in the DJIA, it is not currently part of the index. Therefore, based on the information available, Bowne & Co. is the oldest company that has ever been part of the Dow Jones Industrial Average."
+        }
+      ],
+      "c7_swap": [
+        {
+          "sample_id": "4793051837620109113",
+          "answer_chars": 668,
+          "answer_tail": " constant, including a fried breaded fish fillet, a steamed bun, tartar sauce, and pasteurized processed American cheese. Therefore, the primary fish used in a Filet-O-Fish is Alaska pollock, but it can also include hoki in certain regions."
+        },
+        {
+          "sample_id": "4793051837620109113",
+          "answer_chars": 668,
+          "answer_tail": " constant, including a fried breaded fish fillet, a steamed bun, tartar sauce, and pasteurized processed American cheese. Therefore, the primary fish used in a Filet-O-Fish is Alaska pollock, but it can also include hoki in certain regions."
+        }
+      ]
+    },
+    "scope": "every check_eligibility call in this process (pilot and seed loop); samples: first 3 baseline answers per outcome, last 240 characters"
+  },
+  "scientific_validity": {
+    "n_seeds_recorded": 3,
+    "n_valid_seeds": 0,
+    "n_headline_seeds": 0,
+    "n_excluded_seeds": 3,
+    "null_control_broken_run_level": false,
+    "positive_control_broken_run_level": true,
+    "null_control_basis": "run-level: mean null ITT and mean positive-control target_cited rate over every recorded seed, excluded seeds included (controls, control_checks, control_checks_all_seeds and controls_for_verdicts all hold this block); decides broken_null and broken_positive for the verdicts and scientific_validity.controls_ok. Headline seeds already passed the per-seed validity gates, so they cannot reveal a broken control",
+    "contrasts_basis": "all_recorded_seeds_descriptive",
+    "controls_ok": false,
+    "smoke": false,
+    "is_scientific_result": false
+  },
+  "deviations": {
+    "hyperparameters": [],
+    "probes": [
+      {
+        "component": "positive_control_planted_evidence_relocated",
+        "key": "donor_population",
+        "planned": "top-1 passage of an unrelated eligible item",
+        "used": "covered_items_of_seed_pool",
+        "reason": "eligibility (c8) depends on the donor, so eligible items cannot define the donor pool"
+      },
+      {
+        "component": "entity_swap_foil_end_injection",
+        "key": "donor_population",
+        "planned": "another eligible item's gold answers",
+        "used": "every_other_item_of_seed_pool",
+        "reason": "eligibility (c7) depends on the donor pool, so eligible items cannot define the donor pool; donors come from every other seed-pool item, covered or not"
+      }
+    ],
+    "demonstrations": {
+      "component": "in_context_demonstrations",
+      "planned": "ALCE demonstrations and instruction from asqa_default.json",
+      "used": "0 demonstrations (zero-shot); empty instruction/demo_prompt/doc_prompt fields passed to the reader",
+      "reason": "asqa_default.json not found under ./data; setup.py downloads only asqa_eval_gtr_top100.json (the prompt file ships with the ALCE code repository)"
+    },
+    "smoke_overrides": [],
+    "seed_shortfalls": {
+      "101": 48,
+      "102": 48,
+      "103": 48
+    },
+    "budget_deviation": false,
+    "unrun_seeds": [],
+    "seed_failures": []
+  },
+  "protocol_deviations": {
+    "hyperparameters": [],
+    "probes": [
+      {
+        "component": "positive_control_planted_evidence_relocated",
+        "key": "donor_population",
+        "planned": "top-1 passage of an unrelated eligible item",
+        "used": "covered_items_of_seed_pool",
+        "reason": "eligibility (c8) depends on the donor, so eligible items cannot define the donor pool"
+      },
+      {
+        "component": "entity_swap_foil_end_injection",
+        "key": "donor_population",
+        "planned": "another eligible item's gold answers",
+        "used": "every_other_item_of_seed_pool",
+        "reason": "eligibility (c7) depends on the donor pool, so eligible items cannot define the donor pool; donors come from every other seed-pool item, covered or not"
+      }
+    ],
+    "demonstrations": {
+      "component": "in_context_demonstrations",
+      "planned": "ALCE demonstrations and instruction from asqa_default.json",
+      "used": "0 demonstrations (zero-shot); empty instruction/demo_prompt/doc_prompt fields passed to the reader",
+      "reason": "asqa_default.json not found under ./data; setup.py downloads only asqa_eval_gtr_top100.json (the prompt file ships with the ALCE code repository)"
+    },
+    "smoke_overrides": [],
+    "seed_shortfalls": {
+      "101": 48,
+      "102": 48,
+      "103": 48
+    },
+    "budget_deviation": false,
+    "unrun_seeds": [],
+    "seed_failures": []
+  },
+  "unrun_seeds": [],
+  "seed_failures": [],
+  "item_reuse_across_seeds": {
+    "n_reused": 2,
+    "sample_ids": [
+      "2721445551141766411",
+      "988271751607485679"
+    ],
+    "pairing": "(seed, sample_id)",
+    "inference": "clustered by sample_id",
+    "fallback_counter": "fallback_counters.item_overlap_across_seeds holds the same count"
+  },
+  "fallback_counters": {
+    "slot_mismatch": 0,
+    "digit_merged_slot_skipped": 0,
+    "loo_base_nonpositive": 3,
+    "natural_bin_empty": 20,
+    "nli_truncated": 0,
+    "bootstrap_undefined_resamples": 0,
+    "swap_nli_rejected": 0,
+    "ppl_too_short": 0,
+    "item_rows_missing": 0,
+    "pool_exhausted": 3,
+    "item_exceptions": 0,
+    "glmm_failed": 0,
+    "item_overlap_across_seeds": 2
+  },
+  "fallback_counters_descriptive_contrasts": {
+    "slot_mismatch": 0,
+    "digit_merged_slot_skipped": 0,
+    "loo_base_nonpositive": 0,
+    "natural_bin_empty": 2,
+    "nli_truncated": 0,
+    "bootstrap_undefined_resamples": 1973,
+    "swap_nli_rejected": 0,
+    "ppl_too_short": 0,
+    "item_rows_missing": 0,
+    "pool_exhausted": 0,
+    "item_exceptions": 0,
+    "glmm_failed": 0,
+    "item_overlap_across_seeds": 0
+  },
+  "fallback_counters_by_pool": {},
+  "skipped_components": [],
+  "reduced_components": [
+    {
+      "component": "precondition:data_and_models",
+      "key": "n_demos",
+      "planned": 2,
+      "used": 0,
+      "scope": "precondition_check_only",
+      "reason": "ALCE prompt file with demonstrations unavailable; the run proceeds zero-shot as the recorded deviation deviations.demonstrations"
+    },
+    {
+      "component": "contrasts",
+      "planned": "headline seeds (passing seed_validity)",
+      "used": "every recorded seed with item rows (48 rows); descriptive, verdicts not drawn from it",
+      "reason": "no recorded seed passed seed_validity"
+    },
+    {
+      "component": "glmm",
+      "planned": "headline seeds (passing seed_validity)",
+      "used": "every recorded seed with item rows (48 rows); descriptive, verdicts not drawn from it",
+      "reason": "no recorded seed passed seed_validity"
+    },
+    {
+      "component": "deviance_drop",
+      "planned": "headline seeds (passing seed_validity)",
+      "used": "every recorded seed with item rows (48 rows); descriptive, verdicts not drawn from it",
+      "reason": "no recorded seed passed seed_validity"
+    },
+    {
+      "component": "in_context_demonstrations",
+      "planned": "ALCE demonstrations and instruction from asqa_default.json",
+      "used": "0 demonstrations (zero-shot); empty instruction/demo_prompt/doc_prompt fields passed to the reader",
+      "reason": "asqa_default.json not found under ./data; setup.py downloads only asqa_eval_gtr_top100.json (the prompt file ships with the ALCE code repository)"
+    }
+  ],
+  "designs": {
+    "101": {
+      "n_items": 50,
+      "quota": {
+        "single_source": 25,
+        "redundant": 25
+      },
+      "n_items_rule": "full: largest fitting n in [20, 50] by the Analysis formula for the plan's 5 development seeds",
+      "dtype": "float16",
+      "reader_dtype": "float16",
+      "aux_device": "cpu",
+      "primary_condition": "topical_foil_end_injection",
+      "baseline_condition": "self_span_end_injection",
+      "scale_factor": 1.0,
+      "scan_cap": null,
+      "det_items": 20,
+      "est_sec": 50128.6193300561,
+      "est_sec_sizing_basis": 83146.2331734935,
+      "budget_info": {
+        "per_item_sec": 316.596733396774,
+        "per_seed_fixed_sec": 678.9702518799995,
+        "n_fit": 50,
+        "expected_scanned_per_seed": 167
+      },
+      "pilot": {
+        "pilot_seed": 101,
+        "pilot_items": 10,
+        "n_scanned": 62,
+        "n_eligible": 1,
+        "eligible_rate_measured": 0.016129032258064516,
+        "sec_scan_mean": 27.504814829032256,
+        "sec_gen_mean": 33.94851259399998,
+        "sec_arms": 224.91401729999984,
+        "eligible_item": "988271751607485679",
+        "alias_offsets": [
+          0.040336134453781515,
+          0.7865546218487395,
+          0.8313458262350937,
+          0.37117117117117115,
+          0.4846846846846847
+        ],
+        "errors": [],
+        "n_donor_items": 404,
+        "loo_forced": true,
+        "stages": "pre_eligibility + baseline_generation + eligibility (scan); run_item with force_audit=True (all arms + teacher-forced pass + LOO reliance audit on every arm + ALCE NLI proxy)"
+      },
+      "fixed_phase": {
+        "seconds": 2.1985649000002923,
+        "n_rows": 2000,
+        "errors": []
+      },
+      "smoke": false,
+      "components": [
+        "baseline_unedited_alce_citation",
+        "self_span_end_injection",
+        "topical_foil_end_injection",
+        "entity_swap_foil_end_injection",
+        "self_span_random_injection",
+        "topical_foil_random_injection",
+        "null_random_drop_trailing_whitespace_edit",
+        "positive_control_planted_evidence_relocated",
+        "reliance_audit",
+        "alce_citation_proxy",
+        "determinism_check",
+        "paired_contrasts"
+      ],
+      "skipped_components": [],
+      "confirmation_seeds": [
+        101,
+        102,
+        103
+      ],
+      "run_seeds": [
+        101,
+        102,
+        103
+      ],
+      "sizing": {
+        "pilot_seed": 101,
+        "pilot_seed_source": "experiment_harness.seeds(SEEDS): first seed this run executes",
+        "pilot_pool": "confirmation",
+        "n_seeds_for_sizing": 5,
+        "n_seeds_sizing_basis": "plan development seed count len(HYPERPARAMETERS['seeds']); independent of the run's seed set",
+        "n_seeds_this_run": 3,
+        "est_sec_this_run": 50128.6193300561,
+        "pilot_scan_limit": 10,
+        "n_bounds": [
+          20,
+          50
+        ],
+        "rule": "full: n = largest fitting value in [n_min_items, n_max_items] for the plan's development seed count; pilot on the first run seed; the run's own seed count is only checked against the budget and never changes n"
+      },
+      "pilot_reuse": "donor pool reused by the pilot seed; pilot rows discarded",
+      "item_pool": "whole pool per seed (overlapping across seeds); paired by (seed, sample_id)",
+      "reduced_components": [],
+      "pool_check": [
+        "pool seed 101: size=404 required=ceil(50/0.3)=167 expected_eligible=121.2 -> ok",
+        "FLAG: seed 101 stratum single_source: expected eligible 24.3 < quota 25; a shortfall is likely",
+        "pool seed 102: size=404 required=ceil(50/0.3)=167 expected_eligible=121.2 -> ok",
+        "FLAG: seed 102 stratum single_source: expected eligible 24.3 < quota 25; a shortfall is likely",
+        "pool seed 103: size=404 required=ceil(50/0.3)=167 expected_eligible=121.2 -> ok",
+        "FLAG: seed 103 stratum single_source: expected eligible 24.3 < quota 25; a shortfall is likely"
+      ]
+    },
+    "102": {
+      "n_items": 50,
+      "quota": {
+        "single_source": 25,
+        "redundant": 25
+      },
+      "n_items_rule": "full: largest fitting n in [20, 50] by the Analysis formula for the plan's 5 development seeds",
+      "dtype": "float16",
+      "reader_dtype": "float16",
+      "aux_device": "cpu",
+      "primary_condition": "topical_foil_end_injection",
+      "baseline_condition": "self_span_end_injection",
+      "scale_factor": 1.0,
+      "scan_cap": null,
+      "det_items": 20,
+      "est_sec": 50128.6193300561,
+      "est_sec_sizing_basis": 83146.2331734935,
+      "budget_info": {
+        "per_item_sec": 316.596733396774,
+        "per_seed_fixed_sec": 678.9702518799995,
+        "n_fit": 50,
+        "expected_scanned_per_seed": 167
+      },
+      "pilot": {
+        "pilot_seed": 101,
+        "pilot_items": 10,
+        "n_scanned": 62,
+        "n_eligible": 1,
+        "eligible_rate_measured": 0.016129032258064516,
+        "sec_scan_mean": 27.504814829032256,
+        "sec_gen_mean": 33.94851259399998,
+        "sec_arms": 224.91401729999984,
+        "eligible_item": "988271751607485679",
+        "alias_offsets": [
+          0.040336134453781515,
+          0.7865546218487395,
+          0.8313458262350937,
+          0.37117117117117115,
+          0.4846846846846847
+        ],
+        "errors": [],
+        "n_donor_items": 404,
+        "loo_forced": true,
+        "stages": "pre_eligibility + baseline_generation + eligibility (scan); run_item with force_audit=True (all arms + teacher-forced pass + LOO reliance audit on every arm + ALCE NLI proxy)"
+      },
+      "fixed_phase": {
+        "seconds": 2.1985649000002923,
+        "n_rows": 2000,
+        "errors": []
+      },
+      "smoke": false,
+      "components": [
+        "baseline_unedited_alce_citation",
+        "self_span_end_injection",
+        "topical_foil_end_injection",
+        "entity_swap_foil_end_injection",
+        "self_span_random_injection",
+        "topical_foil_random_injection",
+        "null_random_drop_trailing_whitespace_edit",
+        "positive_control_planted_evidence_relocated",
+        "reliance_audit",
+        "alce_citation_proxy",
+        "determinism_check",
+        "paired_contrasts"
+      ],
+      "skipped_components": [],
+      "confirmation_seeds": [
+        101,
+        102,
+        103
+      ],
+      "run_seeds": [
+        101,
+        102,
+        103
+      ],
+      "sizing": {
+        "pilot_seed": 101,
+        "pilot_seed_source": "experiment_harness.seeds(SEEDS): first seed this run executes",
+        "pilot_pool": "confirmation",
+        "n_seeds_for_sizing": 5,
+        "n_seeds_sizing_basis": "plan development seed count len(HYPERPARAMETERS['seeds']); independent of the run's seed set",
+        "n_seeds_this_run": 3,
+        "est_sec_this_run": 50128.6193300561,
+        "pilot_scan_limit": 10,
+        "n_bounds": [
+          20,
+          50
+        ],
+        "rule": "full: n = largest fitting value in [n_min_items, n_max_items] for the plan's development seed count; pilot on the first run seed; the run's own seed count is only checked against the budget and never changes n"
+      },
+      "pilot_reuse": "donor pool reused by the pilot seed; pilot rows discarded",
+      "item_pool": "whole pool per seed (overlapping across seeds); paired by (seed, sample_id)",
+      "reduced_components": [],
+      "pool_check": [
+        "pool seed 101: size=404 required=ceil(50/0.3)=167 expected_eligible=121.2 -> ok",
+        "FLAG: seed 101 stratum single_source: expected eligible 24.3 < quota 25; a shortfall is likely",
+        "pool seed 102: size=404 required=ceil(50/0.3)=167 expected_eligible=121.2 -> ok",
+        "FLAG: seed 102 stratum single_source: expected eligible 24.3 < quota 25; a shortfall is likely",
+        "pool seed 103: size=404 required=ceil(50/0.3)=167 expected_eligible=121.2 -> ok",
+        "FLAG: seed 103 stratum single_source: expected eligible 24.3 < quota 25; a shortfall is likely"
+      ]
+    },
+    "103": {
+      "n_items": 50,
+      "quota": {
+        "single_source": 25,
+        "redundant": 25
+      },
+      "n_items_rule": "full: largest fitting n in [20, 50] by the Analysis formula for the plan's 5 development seeds",
+      "dtype": "float16",
+      "reader_dtype": "float16",
+      "aux_device": "cpu",
+      "primary_condition": "topical_foil_end_injection",
+      "baseline_condition": "self_span_end_injection",
+      "scale_factor": 1.0,
+      "scan_cap": null,
+      "det_items": 20,
+      "est_sec": 50128.6193300561,
+      "est_sec_sizing_basis": 83146.2331734935,
+      "budget_info": {
+        "per_item_sec": 316.596733396774,
+        "per_seed_fixed_sec": 678.9702518799995,
+        "n_fit": 50,
+        "expected_scanned_per_seed": 167
+      },
+      "pilot": {
+        "pilot_seed": 101,
+        "pilot_items": 10,
+        "n_scanned": 62,
+        "n_eligible": 1,
+        "eligible_rate_measured": 0.016129032258064516,
+        "sec_scan_mean": 27.504814829032256,
+        "sec_gen_mean": 33.94851259399998,
+        "sec_arms": 224.91401729999984,
+        "eligible_item": "988271751607485679",
+        "alias_offsets": [
+          0.040336134453781515,
+          0.7865546218487395,
+          0.8313458262350937,
+          0.37117117117117115,
+          0.4846846846846847
+        ],
+        "errors": [],
+        "n_donor_items": 404,
+        "loo_forced": true,
+        "stages": "pre_eligibility + baseline_generation + eligibility (scan); run_item with force_audit=True (all arms + teacher-forced pass + LOO reliance audit on every arm + ALCE NLI proxy)"
+      },
+      "fixed_phase": {
+        "seconds": 2.1985649000002923,
+        "n_rows": 2000,
+        "errors": []
+      },
+      "smoke": false,
+      "components": [
+        "baseline_unedited_alce_citation",
+        "self_span_end_injection",
+        "topical_foil_end_injection",
+        "entity_swap_foil_end_injection",
+        "self_span_random_injection",
+        "topical_foil_random_injection",
+        "null_random_drop_trailing_whitespace_edit",
+        "positive_control_planted_evidence_relocated",
+        "reliance_audit",
+        "alce_citation_proxy",
+        "determinism_check",
+        "paired_contrasts"
+      ],
+      "skipped_components": [],
+      "confirmation_seeds": [
+        101,
+        102,
+        103
+      ],
+      "run_seeds": [
+        101,
+        102,
+        103
+      ],
+      "sizing": {
+        "pilot_seed": 101,
+        "pilot_seed_source": "experiment_harness.seeds(SEEDS): first seed this run executes",
+        "pilot_pool": "confirmation",
+        "n_seeds_for_sizing": 5,
+        "n_seeds_sizing_basis": "plan development seed count len(HYPERPARAMETERS['seeds']); independent of the run's seed set",
+        "n_seeds_this_run": 3,
+        "est_sec_this_run": 50128.6193300561,
+        "pilot_scan_limit": 10,
+        "n_bounds": [
+          20,
+          50
+        ],
+        "rule": "full: n = largest fitting value in [n_min_items, n_max_items] for the plan's development seed count; pilot on the first run seed; the run's own seed count is only checked against the budget and never changes n"
+      },
+      "pilot_reuse": "donor pool reused by the pilot seed; pilot rows discarded",
+      "item_pool": "whole pool per seed (overlapping across seeds); paired by (seed, sample_id)",
+      "reduced_components": [],
+      "pool_check": [
+        "pool seed 101: size=404 required=ceil(50/0.3)=167 expected_eligible=121.2 -> ok",
+        "FLAG: seed 101 stratum single_source: expected eligible 24.3 < quota 25; a shortfall is likely",
+        "pool seed 102: size=404 required=ceil(50/0.3)=167 expected_eligible=121.2 -> ok",
+        "FLAG: seed 102 stratum single_source: expected eligible 24.3 < quota 25; a shortfall is likely",
+        "pool seed 103: size=404 required=ceil(50/0.3)=167 expected_eligible=121.2 -> ok",
+        "FLAG: seed 103 stratum single_source: expected eligible 24.3 < quota 25; a shortfall is likely"
+      ]
+    }
+  },
+  "backend": {
+    "cuda_available": true,
+    "device": "NVIDIA GeForce RTX 2080 Super with Max-Q Design",
+    "reader_dtype": "float16",
+    "models": {
+      "reader_model_id": "Qwen/Qwen2.5-3B-Instruct",
+      "embed_model_id": "BAAI/bge-small-en-v1.5",
+      "nli_model_id": "cross-encoder/nli-deberta-v3-base",
+      "spacy_model": "en_core_web_sm"
+    },
+    "decoding": "greedy",
+    "batch_size": 1,
+    "nli_max_length": 512,
+    "versions": {
+      "python": "3.14.5",
+      "torch": "2.11.0+cu128",
+      "transformers": "5.16.1",
+      "numpy": "2.4.6",
+      "spacy": "3.8.16",
+      "scipy": "1.18.1",
+      "statsmodels": "not installed",
+      "en_core_web_sm": "3.8.0"
+    },
+    "cublas_workspace_config": ":4096:8",
+    "hf_offline": "1"
+  },
+  "harness": {
+    "backend": "experiment_harness",
+    "resumed_design": false,
+    "already_recorded_seeds": []
+  },
+  "preconditions": [
+    {
+      "name": "model_load",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "data_and_models",
+      "ok": true,
+      "detail": "items=948 (need 948) demos=0 (need >= 0) dev=544 conf=404 manifests=1 zero-shot: ALCE demonstrations unavailable; demonstration minimum set to 0 for this check only (recorded deviation: deviations.demonstrations)"
+    },
+    {
+      "name": "reader_numerics",
+      "ok": true,
+      "detail": "dtype=float16 item=2946416303727163823 answer_logp=-5.652453422546387 slot_logps=10 all_finite=True"
+    },
+    {
+      "name": "digit_tokens",
+      "ok": true,
+      "detail": "digits 1..5 token lengths {1: 1, 2: 1, 3: 1, 4: 1, 5: 1}; multi-token {}"
+    },
+    {
+      "name": "nli_sanity",
+      "ok": true,
+      "detail": "8/8 argmax correct (need >= 7)"
+    },
+    {
+      "name": "spacy_ner",
+      "ok": true,
+      "detail": "entity types missing from NER labels: []"
+    }
+  ],
+  "time": {
+    "elapsed_sec": 35334.448498249054,
+    "estimate_sec": 50128.6193300561,
+    "recalibrated_to_sec": 35815.296347379684,
+    "measured_vs_estimate": 0.7048692032171663,
+    "time_warnings": []
+  },
+  "hyperparameters": {
+    "reader_model_id": "Qwen/Qwen2.5-3B-Instruct",
+    "embed_model_id": "BAAI/bge-small-en-v1.5",
+    "nli_model_id": "cross-encoder/nli-deberta-v3-base",
+    "spacy_model": "en_core_web_sm",
+    "decoding": "greedy",
+    "batch_size": 1,
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "n_passages": 5,
+    "n_demos": 2,
+    "max_new_tokens": 300,
+    "separator": " ",
+    "slot_strata": {
+      "early": [
+        1,
+        2
+      ],
+      "late": [
+        4,
+        5
+      ]
+    },
+    "min_target_sentences": 3,
+    "foil_mining_ranks": [
+      6,
+      20
+    ],
+    "foil_length_tol": 0.1,
+    "foil_cosine_tol": 0.05,
+    "foil_ppl_tol_nats": 0.3,
+    "topical_nli_contradiction_max": 0.5,
+    "entity_types": [
+      "PERSON",
+      "ORG",
+      "GPE",
+      "DATE",
+      "CARDINAL",
+      "WORK_OF_ART",
+      "EVENT",
+      "NORP",
+      "LOC"
+    ],
+    "swap_max_tries": 10,
+    "swap_nli_contradiction_min": 0.5,
+    "offset_bins": 5,
+    "reliance_delta_plant_nats_per_token": 0.1,
+    "reliance_orig_drop_resourcing": 0.5,
+    "reliance_orig_drop_postrat": 0.2,
+    "alce_entail_threshold": 0.5,
+    "nli_max_length": 512,
+    "bootstrap_resamples": 2000,
+    "bootstrap_seed": 20260928,
+    "effect_threshold": 0.03,
+    "tost_margin": 0.05,
+    "alpha": 0.05,
+    "ratio_ci_lower_min": 0.3,
+    "near_tie_share_threshold": 0.6,
+    "null_expected_max": 0.03,
+    "null_broken_above": 0.05,
+    "pos_expected_min": 0.5,
+    "pos_broken_below": 0.3,
+    "parse_rate_gate": 0.9,
+    "determinism_gate": 1.0,
+    "expected_eval_items": 948,
+    "manifest_glob": "*manifest*.json",
+    "nli_sanity_min_correct": 7,
+    "n_max_items": 50,
+    "n_min_items": 20,
+    "det_items": 20,
+    "eligible_rate_prior": 0.3,
+    "time_budget_sec": 43200,
+    "overhead_sec": 600,
+    "seed_start_safety_factor": 1.1,
+    "pilot_scan_items": 10,
+    "max_item_exceptions": 10,
+    "smoke_n_items": 5,
+    "smoke_min_items": 2,
+    "smoke_scan_cap": 40
+  },
+  "preregistered": {
+    "reader_model_id": "Qwen/Qwen2.5-3B-Instruct",
+    "nli_model_id": "cross-encoder/nli-deberta-v3-base",
+    "decoding": "greedy",
+    "batch_size": 1,
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "foil_mining_ranks": [
+      6,
+      20
+    ],
+    "foil_length_tol": 0.1,
+    "foil_cosine_tol": 0.05,
+    "foil_ppl_tol_nats": 0.3,
+    "topical_nli_contradiction_max": 0.5,
+    "swap_max_tries": 10,
+    "swap_nli_contradiction_min": 0.5,
+    "entity_types": [
+      "PERSON",
+      "ORG",
+      "GPE",
+      "DATE",
+      "CARDINAL",
+      "WORK_OF_ART",
+      "EVENT",
+      "NORP",
+      "LOC"
+    ],
+    "offset_bins": 5,
+    "reliance_delta_plant_nats_per_token": 0.1,
+    "reliance_orig_drop_resourcing": 0.5,
+    "reliance_orig_drop_postrat": 0.2,
+    "bootstrap_resamples": 2000,
+    "effect_threshold": 0.03,
+    "tost_margin": 0.05,
+    "ratio_ci_lower_min": 0.3,
+    "near_tie_share_threshold": 0.6,
+    "null_expected_max": 0.03,
+    "null_broken_above": 0.05,
+    "pos_expected_min": 0.5,
+    "pos_broken_below": 0.3,
+    "parse_rate_gate": 0.9,
+    "determinism_gate": 1.0,
+    "n_max_items": 50,
+    "n_min_items": 20,
+    "det_items": 20,
+    "smoke_n_items": 5,
+    "smoke_min_items": 2,
+    "smoke_scan_cap": 40,
+    "pilot_scan_items": 10,
+    "max_new_tokens": 300,
+    "n_passages": 5,
+    "n_demos": 2
+  },
+  "excluded_selections": {
+    "CIFAR-10": "image data; not relevant to citation behaviour",
+    "LSTM LM": "architecture, not a citation-measurement method",
+    "DANN": "architecture, not a citation-measurement method"
+  },
+  "data_config": {
+    "name": "ASQA-ALCE",
+    "hf_id": "princeton-nlp/ALCE-data",
+    "eval_file": "asqa_eval_gtr_top100.json",
+    "demo_file": "asqa_default.json",
+    "task": "long-form QA with passage-ID citations (RAG citation probe)",
+    "modality": "text",
+    "num_classes": null,
+    "input_shape": null,
+    "n_in_context_passages": 5,
+    "foil_mining_ranks": [
+      6,
+      20
+    ],
+    "min_target_sentences": 3,
+    "confirmation_fraction": 0.4,
+    "expected_num_items": 948,
+    "per_seed_pool": "whole val pool for plan seeds, whole test pool otherwise (overlapping across seeds)",
+    "reader_model": "Qwen/Qwen2.5-3B-Instruct",
+    "embedder": "BAAI/bge-small-en-v1.5",
+    "nli_model": "cross-encoder/nli-deberta-v3-base",
+    "regime_factors": {
+      "evidence_redundancy": [
+        "single_source",
+        "redundant"
+      ],
+      "target_slot": [
+        "early_slot_1_2",
+        "late_slot_4_5"
+      ]
+    },
+    "excluded_datasets": {
+      "CIFAR-10": "image classification; irrelevant to RAG citation behaviour"
+    },
+    "demo_path": null,
+    "demo_deviation": {
+      "component": "in_context_demonstrations",
+      "planned": "ALCE demonstrations and instruction from asqa_default.json",
+      "used": "0 demonstrations (zero-shot); empty instruction/demo_prompt/doc_prompt fields passed to the reader",
+      "reason": "asqa_default.json not found under ./data; setup.py downloads only asqa_eval_gtr_top100.json (the prompt file ships with the ALCE code repository)"
+    },
+    "alias_offset_splitter": "baselines.spacy_sentence_spans(spaCy en_core_web_sm, same splitter as random-boundary arms)",
+    "alias_offset_timing": "lazy per item on first use (no corpus-wide spaCy pass at load)",
+    "eval_path": "./data/asqa_eval_gtr_top100.json",
+    "num_items_total": 948,
+    "num_items_unparseable": 0,
+    "unparseable_items": [],
+    "num_dev_pool": 544,
+    "num_confirmation_pool": 404,
+    "coverage_rate_dev": 0.7996323529411765,
+    "coverage_rate_confirmation": 0.8168316831683168,
+    "num_demos": 0,
+    "redundancy_counts_dev": {
+      "single_source": 118,
+      "redundant": 317,
+      "uncovered": 109
+    }
+  },
+  "non_finite_values_replaced": [],
+  "stringified_values": []
+}
